@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="css/flash.css">
+<title>Flash Food Court</title>
+</head>
+<body>
+
+<div id="header">
+<h1>Flash Food Court</h1>
+<img src="flash.jpg" alt="flash" style="width:304px;height:228px;">
+</div>
+
+<div id="nav">
+<a href="home.html">Menu</a>
+|
+<a href="html/itemlist.html">Items</a>
+|
+Reservations
+<select onChange="window.location.href=this.value">
+	<option value="blank"></option>
+	<option value="html/reservation.html">Reservations Home</option>
+	<option value="html/makereservation.html">Make Reservation</option>
+	<option value="html/editreservations.html">Edit Reservation</option>
+</select>
+|
+<a href="html/login.html">Login</a>
+|
+<a href="html/about.html">Hours and Contact Info</a>
+</div>
+
+<div id="section">
+<button>Previous Week</button>
+<button>Select Week</button>
+<button>Next Week</button>
+<table id="menu" align="center">
+<tr>
+	<th>Monday</th>
+	<th>Tuesday</th>
+	<th>Wednesday</th>
+	<th>Thursday</th>
+	<th>Friday</th>
+</tr>
+<tr>
+	<td>Entree: Baked Chicken <br> &ensp; Cal: 400, $5.00</td>
+	<td>Entree: Tacos <br> &ensp; Cal: 400, $5.00</td>
+	<td>Entree: Tuna Sandwich <br> &ensp; Cal: 400, $5.00</td>
+	<td>Entree: Hamburger <br> &ensp; Cal: 400, $5.00</td>
+	<td>Entree: Baked Potato <br> &ensp; Cal: 400, $5.00</td>	
+</tr>
+<tr>
+	<td>Side: Celery <br> &ensp; Cal: 150, $1.00</td>
+	<td>Side: Carrot <br> &ensp; Cal: 150, $1.00</td>
+	<td>Side: Banana <br> &ensp; Cal: 150, $1.00</td>
+	<td>Side: Apple <br> &ensp; Cal: 150, $1.00</td>
+	<td>Side: Bacon <br> &ensp; Cal: 150, $1.00</td>	
+</tr>
+<tr>
+	<td>Side: Cherry Tomatoes <br> &ensp; Cal: 150, $1.00</td>
+	<td>Side: Brocolli <br> &ensp; Cal: 150, $1.00</td>
+	<td>Side: Peas <br> &ensp; Cal: 150, $1.00</td>
+	<td>Side: Spinach <br> &ensp; Cal: 150, $1.00</td>
+	<td>Side: Cucumber <br> &ensp; Cal: 150, $1.00</td>	
+</tr>
+<tr>
+	<td>Special: Omelette <br> &ensp; Cal: 350, $3.50</td>
+	<td>Special: Nachos <br> &ensp; Cal: 350, $3.50</td>
+	<td>Special: Fruit Salad <br> &ensp; Cal: 350, $3.50</td>
+	<td>Special: Cesear Salad <br> &ensp; Cal: 350, $3.50</td>
+	<td>Special: Ratatouille <br> &ensp; Cal: 350, $3.50</td>	
+</tr>
+
+</table>
+</div>
+
+<div id="footer">
+Team Flash
+</div>
+
+</body>
+</html>
