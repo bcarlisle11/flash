@@ -10,6 +10,17 @@ body{
 	color:black;
 	text-align:center;
 	padding:6px;
+	font-family: "Courier New";
+}
+
+img {
+	height: 92px;
+}
+
+.top-right {
+	position: absolute;
+	top: 8px;
+	right: 8px;
 }
 
 #nav {
@@ -19,9 +30,20 @@ body{
 }
 
 #form {
-	border:gold 5px solid;
 	text-align:center;
-	padding:6px;
+	font-weight: bold;
+	padding: 6px;
+	background-color: darkred;
+	width: 750px;
+	height: 300px;
+}
+
+
+.center {
+	margin: auto;
+	width: 60%;
+	padding: 100px;
+	border-radius: 25px;
 }
 
 #footer {
@@ -130,4 +152,27 @@ li a:hover, .dropdown:hover .dropdown_btn {
 
 .show {
 	display:block;
+}
+
+#res_section {
+	padding:6px;
+	text-align:center;
+	margin: 50px;
+}
+
+label{
+	display: inline-block;
+	float: left;
+	clear: left;
+	width: 350px;
+	text-align: right;
+}
+input {
+	display: inline-block;
+	float: left;
+}
+
+form {
+	display: inline-block;
+	float: left;
 }
