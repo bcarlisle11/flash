@@ -169,14 +169,10 @@ label{
 }
 input {
 	display: inline-block;
-	float: none;
+	float: left;
 }
 
 form {
 	display: inline-block;
 	float: left;
-}
-
-#submit{
-	margin: auto;
 }
