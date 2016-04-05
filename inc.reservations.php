@@ -4,6 +4,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
  * Team Flash
  * CS 321
  * inc.reservations.php
@@ -11,6 +12,8 @@
  */
 
 =======
+=======
+>>>>>>> parent of 0c436a8... Replaced individual files with complete directory
 =======
 >>>>>>> parent of 0c436a8... Replaced individual files with complete directory
 =======
@@ -47,6 +50,9 @@ function getPDO($dbname) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> parent of 0c436a8... Replaced individual files with complete directory
+=======
 >>>>>>> parent of 0c436a8... Replaced individual files with complete directory
 =======
 >>>>>>> parent of 0c436a8... Replaced individual files with complete directory
@@ -76,9 +82,12 @@ function dropPhp($name, array $myArr, $chosen=null)
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     echo $drop;
 }
 =======
+=======
+>>>>>>> parent of 0c436a8... Replaced individual files with complete directory
 =======
 >>>>>>> parent of 0c436a8... Replaced individual files with complete directory
 =======
@@ -112,6 +121,9 @@ EOSQL;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> parent of 0c436a8... Replaced individual files with complete directory
+=======
 >>>>>>> parent of 0c436a8... Replaced individual files with complete directory
 =======
 >>>>>>> parent of 0c436a8... Replaced individual files with complete directory

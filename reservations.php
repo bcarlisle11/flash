@@ -4,6 +4,10 @@ include ('inc.reservations.php');
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+include ('flashDB.php');
+>>>>>>> parent of 0c436a8... Replaced individual files with complete directory
 =======
 include ('flashDB.php');
 >>>>>>> parent of 0c436a8... Replaced individual files with complete directory
@@ -34,6 +38,7 @@ echo "<script type='text/javascript' src='../script/reservations.js'></script>";
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         <?php
         include_once"pageNav.php"
         ?>
@@ -41,6 +46,8 @@ echo "<script type='text/javascript' src='../script/reservations.js'></script>";
     include_once "resForm.php"
     ?>
 =======
+=======
+>>>>>>> parent of 0c436a8... Replaced individual files with complete directory
 =======
 >>>>>>> parent of 0c436a8... Replaced individual files with complete directory
 =======
@@ -113,6 +120,9 @@ echo "<script type='text/javascript' src='../script/reservations.js'></script>";
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> parent of 0c436a8... Replaced individual files with complete directory
+=======
 >>>>>>> parent of 0c436a8... Replaced individual files with complete directory
 =======
 >>>>>>> parent of 0c436a8... Replaced individual files with complete directory
