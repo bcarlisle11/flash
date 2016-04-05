@@ -1,6 +1,7 @@
 <?php
 /**
 <<<<<<< HEAD
+<<<<<<< HEAD
  * Team Flash
  * CS 321
  * inc.reservations.php
@@ -8,6 +9,8 @@
  */
 
 =======
+=======
+>>>>>>> parent of 0c436a8... Replaced individual files with complete directory
  * Created by PhpStorm.
  * User: bcarlisle11
  * Date: 3/29/16
@@ -35,6 +38,9 @@ function getPDO($dbname) {
     }
 }// end getPDO()
 
+<<<<<<< HEAD
+>>>>>>> parent of 0c436a8... Replaced individual files with complete directory
+=======
 >>>>>>> parent of 0c436a8... Replaced individual files with complete directory
 function dropPhp($name, array $myArr, $chosen=null)
 {
@@ -55,9 +61,12 @@ function dropPhp($name, array $myArr, $chosen=null)
 
     return $drop;
 <<<<<<< HEAD
+<<<<<<< HEAD
     echo $drop;
 }
 =======
+=======
+>>>>>>> parent of 0c436a8... Replaced individual files with complete directory
 }
 
 function populateReservations()
@@ -82,5 +91,8 @@ EOSQL;
 }
 
     }
+<<<<<<< HEAD
+>>>>>>> parent of 0c436a8... Replaced individual files with complete directory
+=======
 >>>>>>> parent of 0c436a8... Replaced individual files with complete directory
 ?>

@@ -1,6 +1,10 @@
 <?php
 include ('inc.reservations.php');
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+include ('flashDB.php');
+>>>>>>> parent of 0c436a8... Replaced individual files with complete directory
 =======
 include ('flashDB.php');
 >>>>>>> parent of 0c436a8... Replaced individual files with complete directory
@@ -19,6 +23,7 @@ echo "<script type='text/javascript' src='../script/reservations.js'></script>";
 <body>
 <main id="reservation_home">
 <<<<<<< HEAD
+<<<<<<< HEAD
         <?php
         include_once"pageNav.php"
         ?>
@@ -26,6 +31,8 @@ echo "<script type='text/javascript' src='../script/reservations.js'></script>";
     include_once "resForm.php"
     ?>
 =======
+=======
+>>>>>>> parent of 0c436a8... Replaced individual files with complete directory
     <header id="header">
         <h1>Flash Food Court</h1>
         <img class ="top-right" src="../flash.jpg" alt="flash" style="...">
@@ -89,6 +96,9 @@ echo "<script type='text/javascript' src='../script/reservations.js'></script>";
         <button><a href="reservations.php?task=populateReservations">Submit</a></button>
     </div>
     </div>
+<<<<<<< HEAD
+>>>>>>> parent of 0c436a8... Replaced individual files with complete directory
+=======
 >>>>>>> parent of 0c436a8... Replaced individual files with complete directory
 </main>
 <div id="footer">
