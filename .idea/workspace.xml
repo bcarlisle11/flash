@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5f1e4ffc-a2f5-4268-bcc9-1d06e4503277" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/addRes.php" afterPath="$PROJECT_DIR$/php/addRes.php" />
-    </list>
+    <list default="true" id="5f1e4ffc-a2f5-4268-bcc9-1d06e4503277" name="Default" comment="" />
     <ignored path="flash.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -58,7 +55,7 @@
       <file leaf-file-name="addRes.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/php/addRes.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="406">
+            <state relative-caret-position="720">
               <caret line="48" column="2" selection-start-line="48" selection-start-column="2" selection-end-line="48" selection-end-column="2" />
               <folding>
                 <element signature="e#6#91#0#PHP" expanded="true" />
@@ -330,12 +327,12 @@
       <workItem from="1459290692417" duration="2000" />
       <workItem from="1459290699349" duration="4225000" />
       <workItem from="1459296572315" duration="36146000" />
-      <workItem from="1459882224950" duration="138000" />
+      <workItem from="1459882224950" duration="264000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="40511000" />
+    <option name="totallyTimeSpent" value="40637000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="36" y="23" width="1244" height="722" extended-state="0" />
@@ -556,7 +553,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/php/addRes.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="406">
+        <state relative-caret-position="720">
           <caret line="48" column="2" selection-start-line="48" selection-start-column="2" selection-end-line="48" selection-end-column="2" />
           <folding>
             <element signature="e#6#91#0#PHP" expanded="true" />
