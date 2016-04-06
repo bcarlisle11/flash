@@ -34,16 +34,15 @@ img {
 	font-weight: bold;
 	padding: 6px;
 	background-color: darkred;
-	width: 750px;
-	height: 300px;
+	width: 60%;
+	height: 47.5%;
+	border-radius: 25px;
 }
 
 
 .center {
 	margin: auto;
 	width: 60%;
-	padding: 100px;
-	border-radius: 25px;
 }
 
 #footer {
@@ -74,6 +73,7 @@ th, td{
 	height:500px;
 	border:gold solid 5px;
 }
+
 #itemSelect, #itemDescription, #itemPicture{
 	
 	float:left;
@@ -163,20 +163,18 @@ li a:hover, .dropdown:hover .dropdown_btn {
 label{
 	display: inline-block;
 	float: left;
-	clear: left;
-	width: 350px;
 	text-align: right;
 }
 input {
 	display: inline-block;
-	float: none;
+	float: right;
 }
 
 form {
 	display: inline-block;
-	float: left;
 }
 
 #submit{
 	margin: auto;
+	float: none;
 }

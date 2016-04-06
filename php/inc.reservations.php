@@ -6,6 +6,17 @@
  * Used to add extra php methods to reservations.php
  */
 
+$idErr = $emailErr = $genderErr = $websiteErr = "";
+$id = $email = $gender = $comment = $website = "";
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    if (empty($_POST["id"])) {
+        $idErr = "First Name is required";
+    } else {
+        $id = validateForm($_POST["id"]);
+    }
+}
+
 function dropPhp($name, array $myArr, $chosen=null)
 {
     //open select html tag
@@ -25,5 +36,12 @@ function dropPhp($name, array $myArr, $chosen=null)
 
     return $drop;
     echo $drop;
+}
+
+function validateForm($input) {
+    $input = trim($input);
+    $input = stripslashes($input);
+    $input = htmlspecialchars($input);
+    return $input;
 }
 ?>

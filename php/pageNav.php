@@ -12,15 +12,14 @@
     </header>
 <ul>
     <li><a href="../home.html">Menu</a></li>
-    <a href="#"></a>
     <li><a href="itemList.html">Items</a></li>
     <li class="dropdown">
         <a href="javascript:void(0)" class="dropdown_btn" onclick="dropDownList()">Reservations</a>
         <div class="dropdown_class" id="drop_list">
-            <a href="#">Reservations Home</a>
-            <a href="#">Make Reservation</a>
-            <a href="#">Edit Reservation</a>
-            <a href="#">Check Active Reservations</a>
+            <a href="reservations.php">Reservations Home</a>
+            <a href="makeRes.php">Make Reservation</a>
+            <a href="editRes.php">Edit Reservation</a>
+            <a href="activeRes.php">Check Active Reservations</a>
         </div>
     </li>
     <li><a href="login.html">Login</a></li>

@@ -5,6 +5,8 @@
  * Date: 4/4/16
  * Time: 1:28 PM
  */
+include ('inc.reservations.php');
+echo "<script type='text/javascript' src='../script/reservations.js'></script>";
 
     try {
         $pdo = getPDO('flash');
@@ -25,7 +27,7 @@
         $pdo = null;
 
     } catch (PDOException $e) {
-        echo($e->getMessage());
+        //echo($e->getMessage());
     }
 //}
 
@@ -40,17 +42,21 @@
             return $pdo;
 
         } catch (PDOException $e) {
-            $GLOBALS['ConfirmationMessage'] = $e->getMessage();
+            //$GLOBALS['ConfirmationMessage'] = $e->getMessage();
         }
     }
-
-
-
-//function validateForm($input) {
-    //$input = trim($input);
-    //$input = stripslashes($input);
-    //$input = htmlspecialchars($input);
-  //  return $input;
-//}
-
 ?>
+
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Reservations</title>
+    <link rel="stylesheet" href="../css/flash.css">
+</head>
+<body>
+<main id="reservation_home">
+    <?php
+    include_once"pageNav.php"
+    ?>
+   

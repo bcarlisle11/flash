@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5f1e4ffc-a2f5-4268-bcc9-1d06e4503277" name="Default" comment="" />
+    <list default="true" id="5f1e4ffc-a2f5-4268-bcc9-1d06e4503277" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/flash.css" afterPath="$PROJECT_DIR$/css/flash.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/addRes.php" afterPath="$PROJECT_DIR$/php/addRes.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/inc.reservations.php" afterPath="$PROJECT_DIR$/php/inc.reservations.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/pageNav.php" afterPath="$PROJECT_DIR$/php/pageNav.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/resForm.php" afterPath="$PROJECT_DIR$/php/resForm.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/reservations.php" afterPath="$PROJECT_DIR$/php/reservations.php" />
+    </list>
     <ignored path="flash.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -22,54 +30,64 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="flash.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/css/flash.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="496">
-              <caret line="180" column="17" selection-start-line="180" selection-start-column="17" selection-end-line="180" selection-end-column="17" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="flashDB.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/db/flashDB.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" column="43" selection-start-line="7" selection-start-column="43" selection-end-line="7" selection-end-column="43" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="home.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/home.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" column="6" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="addRes.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="addRes.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/php/addRes.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="720">
-              <caret line="48" column="2" selection-start-line="48" selection-start-column="2" selection-end-line="48" selection-end-column="2" />
+            <state relative-caret-position="150">
+              <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="18" selection-end-column="35" />
               <folding>
-                <element signature="e#6#91#0#PHP" expanded="true" />
-                <marker date="1459882278000" expanded="true" signature="347:506" placeholder="INSERT INTO reservations... " />
+                <marker date="1459907049000" expanded="true" signature="462:621" placeholder="INSERT INTO reservations... " />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="reservations.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="checkRes.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/php/checkRes.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="285">
+              <caret line="21" column="102" selection-start-line="21" selection-start-column="102" selection-end-line="21" selection-end-column="102" />
+              <folding>
+                <marker date="1459909864000" expanded="true" signature="194:201" placeholder="SELECT * FRO... reservations" />
+                <marker date="1459909864000" expanded="true" signature="194:284" placeholder="SELECT `id`,... reservations" />
+                <marker date="1459909864000" expanded="true" signature="200:201" placeholder="INSERT INTO reservations... " />
+                <marker date="1459909864000" expanded="true" signature="433:523" placeholder="..." />
+                <marker date="1459909864000" expanded="true" signature="433:806" placeholder="..." />
+                <marker date="1459909864000" expanded="true" signature="433:1206" placeholder="..." />
+                <marker date="1459909864000" expanded="true" signature="1665:1681" placeholder="..." />
+                <marker date="1459909864000" expanded="true" signature="1832:1846" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="reservations.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/php/reservations.php">
           <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="345">
+              <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="27" selection-end-column="7" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pageNav.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/php/pageNav.php">
+          <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="195">
-              <caret line="13" column="7" selection-start-line="13" selection-start-column="7" selection-end-line="13" selection-end-column="7" />
+              <caret line="13" column="44" selection-start-line="13" selection-start-column="44" selection-end-line="13" selection-end-column="44" />
+              <folding>
+                <element signature="e#6#92#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="activeRes.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/php/activeRes.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="300">
+              <caret line="20" column="41" selection-start-line="20" selection-start-column="41" selection-end-line="20" selection-end-column="41" />
               <folding />
             </state>
           </provider>
@@ -78,23 +96,19 @@
       <file leaf-file-name="resForm.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/php/resForm.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="705">
-              <caret line="47" column="30" selection-start-line="47" selection-start-column="30" selection-end-line="47" selection-end-column="30" />
-              <folding>
-                <element signature="e#6#91#0#PHP" expanded="true" />
-              </folding>
+            <state relative-caret-position="46">
+              <caret line="5" column="16" selection-start-line="5" selection-start-column="16" selection-end-line="5" selection-end-column="16" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pageNav.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/php/pageNav.php">
+      <file leaf-file-name="editRes.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/php/editRes.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-              <folding>
-                <element signature="e#6#92#0#PHP" expanded="true" />
-              </folding>
+            <state relative-caret-position="270">
+              <caret line="18" column="2" selection-start-line="18" selection-start-column="2" selection-end-line="18" selection-end-column="2" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -102,11 +116,21 @@
       <file leaf-file-name="inc.reservations.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/php/inc.reservations.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="405">
-              <caret line="27" column="1" selection-start-line="27" selection-start-column="1" selection-end-line="27" selection-end-column="1" />
+            <state relative-caret-position="675">
+              <caret line="45" column="1" selection-start-line="45" selection-start-column="1" selection-end-line="45" selection-end-column="1" />
               <folding>
                 <element signature="e#6#114#0#PHP" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="makeRes.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/php/makeRes.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="225">
+              <caret line="15" column="26" selection-start-line="15" selection-start-column="26" selection-end-line="15" selection-end-column="26" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -140,11 +164,16 @@
         <option value="$PROJECT_DIR$/db/mysql-inc.arcadeDB.php" />
         <option value="$PROJECT_DIR$/db/flashDB.php" />
         <option value="$PROJECT_DIR$/php/inc.reservations.php" />
+        <option value="$PROJECT_DIR$/php/resHome.php" />
+        <option value="$PROJECT_DIR$/php/makeRes.php" />
         <option value="$PROJECT_DIR$/php/reservations.php" />
-        <option value="$PROJECT_DIR$/php/pageNav.php" />
-        <option value="$PROJECT_DIR$/php/resForm.php" />
         <option value="$PROJECT_DIR$/css/flash.css" />
+        <option value="$PROJECT_DIR$/php/pageNav.php" />
+        <option value="$PROJECT_DIR$/php/editRes.php" />
+        <option value="$PROJECT_DIR$/php/resForm.php" />
         <option value="$PROJECT_DIR$/php/addRes.php" />
+        <option value="$PROJECT_DIR$/php/activeRes.php" />
+        <option value="$PROJECT_DIR$/php/checkRes.php" />
       </list>
     </option>
   </component>
@@ -327,12 +356,12 @@
       <workItem from="1459290692417" duration="2000" />
       <workItem from="1459290699349" duration="4225000" />
       <workItem from="1459296572315" duration="36146000" />
-      <workItem from="1459882224950" duration="264000" />
+      <workItem from="1459882224950" duration="9042000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="40637000" />
+    <option name="totallyTimeSpent" value="49415000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="36" y="23" width="1244" height="722" extended-state="0" />
@@ -342,6 +371,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3093415" sideWeight="0.12982456" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32924962" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -353,7 +383,6 @@
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3093415" sideWeight="0.8701754" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32924962" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
@@ -397,8 +426,7 @@
         <state relative-caret-position="450">
           <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
           <folding>
-            <element signature="e#6#91#0#PHP" expanded="true" />
-            <marker date="1459882278000" expanded="true" signature="347:506" placeholder="INSERT INTO reservations... " />
+            <marker date="1459907049000" expanded="true" signature="462:621" placeholder="INSERT INTO reservations... " />
           </folding>
         </state>
       </provider>
@@ -415,9 +443,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="705">
           <caret line="47" column="30" selection-start-line="47" selection-start-column="30" selection-end-line="47" selection-end-column="30" />
-          <folding>
-            <element signature="e#6#91#0#PHP" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -488,25 +514,7 @@
     <entry file="file://$PROJECT_DIR$/php/inc.edit.php" />
     <entry file="file://$PROJECT_DIR$/php/edit.php" />
     <entry file="file://$PROJECT_DIR$/php/inc.arcade.php" />
-    <entry file="file://$PROJECT_DIR$/php/inc.reservations.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="27" column="1" selection-start-line="27" selection-start-column="1" selection-end-line="27" selection-end-column="1" />
-          <folding>
-            <element signature="e#6#114#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/php/arcade.php" />
-    <entry file="file://$PROJECT_DIR$/db/flashDB.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="43" selection-start-line="7" selection-start-column="43" selection-end-line="7" selection-end-column="43" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/home.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
@@ -515,50 +523,114 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/php/pageNav.php">
+    <entry file="file://$PROJECT_DIR$/php/resHome.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-          <folding>
-            <element signature="e#6#92#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/php/resForm.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="705">
-          <caret line="47" column="30" selection-start-line="47" selection-start-column="30" selection-end-line="47" selection-end-column="30" />
-          <folding>
-            <element signature="e#6#91#0#PHP" expanded="true" />
-          </folding>
+        <state relative-caret-position="120">
+          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/css/flash.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="496">
-          <caret line="180" column="17" selection-start-line="180" selection-start-column="17" selection-end-line="180" selection-end-column="17" />
+        <state relative-caret-position="376">
+          <caret line="169" column="16" selection-start-line="169" selection-start-column="16" selection-end-line="169" selection-end-column="16" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/php/reservations.php">
+    <entry file="file://$PROJECT_DIR$/php/makeRes.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="7" selection-start-line="13" selection-start-column="7" selection-end-line="13" selection-end-column="7" />
+        <state relative-caret-position="225">
+          <caret line="15" column="26" selection-start-line="15" selection-start-column="26" selection-end-line="15" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/php/inc.reservations.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="675">
+          <caret line="45" column="1" selection-start-line="45" selection-start-column="1" selection-end-line="45" selection-end-column="1" />
+          <folding>
+            <element signature="e#6#114#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/flashDB.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="43" selection-start-line="7" selection-start-column="43" selection-end-line="7" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/php/editRes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="2" selection-start-line="18" selection-start-column="2" selection-end-line="18" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/php/activeRes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" column="41" selection-start-line="20" selection-start-column="41" selection-end-line="20" selection-end-column="41" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/php/addRes.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="720">
-          <caret line="48" column="2" selection-start-line="48" selection-start-column="2" selection-end-line="48" selection-end-column="2" />
+        <state relative-caret-position="150">
+          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="18" selection-end-column="35" />
           <folding>
-            <element signature="e#6#91#0#PHP" expanded="true" />
-            <marker date="1459882278000" expanded="true" signature="347:506" placeholder="INSERT INTO reservations... " />
+            <marker date="1459907049000" expanded="true" signature="462:621" placeholder="INSERT INTO reservations... " />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/php/resForm.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="46">
+          <caret line="5" column="16" selection-start-line="5" selection-start-column="16" selection-end-line="5" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/php/checkRes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="21" column="102" selection-start-line="21" selection-start-column="102" selection-end-line="21" selection-end-column="102" />
+          <folding>
+            <marker date="1459909864000" expanded="true" signature="194:201" placeholder="SELECT * FRO... reservations" />
+            <marker date="1459909864000" expanded="true" signature="194:284" placeholder="SELECT `id`,... reservations" />
+            <marker date="1459909864000" expanded="true" signature="200:201" placeholder="INSERT INTO reservations... " />
+            <marker date="1459909864000" expanded="true" signature="433:523" placeholder="..." />
+            <marker date="1459909864000" expanded="true" signature="433:806" placeholder="..." />
+            <marker date="1459909864000" expanded="true" signature="433:1206" placeholder="..." />
+            <marker date="1459909864000" expanded="true" signature="1665:1681" placeholder="..." />
+            <marker date="1459909864000" expanded="true" signature="1832:1846" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/php/pageNav.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="44" selection-start-line="13" selection-start-column="44" selection-end-line="13" selection-end-column="44" />
+          <folding>
+            <element signature="e#6#92#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/php/reservations.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="27" selection-end-column="7" />
+          <folding />
         </state>
       </provider>
     </entry>
