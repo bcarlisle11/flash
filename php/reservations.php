@@ -6,7 +6,7 @@ echo "<script type='text/javascript' src='../script/reservations.js'></script>";
 
 
 <!DOCTYPE html>
-<html>
+<html xmlns="http://www.w3.org/1999/html">
 <head lang="en">
     <meta charset="UTF-8">
     <title>Reservations</title>
@@ -17,9 +17,15 @@ echo "<script type='text/javascript' src='../script/reservations.js'></script>";
         <?php
         include_once"pageNav.php"
         ?>
-    <?php
-    include_once "resForm.php"
-    ?>
+    <div id="res_section">
+    <div id="form" class="center">
+        Reservations Home Page
+        <br><br>
+        <a href ="makeRes.php"><button type="button">Make A Reservation</button></a><br><br>
+        <button type="button">Edit A Reservation</button><br><br>
+        <button type="button">Check Active Reservations</button><br><br>
+    </div>
+    </div>
 </main>
 <div id="footer">
     Team Flash

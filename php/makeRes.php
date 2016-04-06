@@ -1,6 +1,23 @@
 <?php
 include ('inc.reservations.php');
 echo "<script type='text/javascript' src='../script/reservations.js'></script>";
+
+function getPDO($dbname)
+{
+    include('../db/flashDB.php');
+
+    try {
+        $pdo = new PDO(DB_CONNECTION_STRING . ";dbname=$dbname", DB_USER, DB_PWD);
+        $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+        return $pdo;
+
+    } catch (PDOException $e) {
+        //$GLOBALS['ConfirmationMessage'] = $e->getMessage();
+    }
+}
+?>
+
 ?>
 
 

@@ -41,10 +41,10 @@ function updateRes(){
             SET `id`=[$id],`fname`=[$fname],`lname`=[$lname],`diners`=[$diners],`dayof`=[$day],`timeof`=[$time] 
             WHERE id=$id";
 
-        $queryResult2 = $pdo->query($sql2);
+        $queryResult = $pdo->query($sql2);
 
-        while ( $row = $queryResult2->fetch(PDO::FETCH_ASSOC) ) {
-            $queryData2 = "
+        while ( $row = $queryResult->fetch(PDO::FETCH_ASSOC) ) {
+            $queryData = "
                 <label for 'id'>Employee ID: </label><input type='text' name='id' value={$row['id']} readonly><br><br>
                 <label for 'fname'>First Name: </label><input type='text' name='fname' value={$row['fname']} readonly><br><br>
                 <label for 'lname'>Last Name: </label><input type='text' name='lname' value={$row['lname']}><br><br>
@@ -95,7 +95,7 @@ include_once"pageNav.php"
         <div method="post" id="res_section">
             <div id="form" class="center">
                 Active reservations for employee id <?php echo $id?>:<br><br>
-                <form method ='post' action=''>
+                <form method ='post' action=<?php echo updateRes()?>>
                     <?php $queryData?>
                     <input id='submit' name ='submit' type ='submit'>
                 </form>
