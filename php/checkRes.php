@@ -11,16 +11,19 @@ try {
 
     $queryResult = $pdo->query($sql);
 
+    $queryData = "    <table>
+                      <th>Reservation Day</th>
+                      <th>Reservation Time</th>
+                      <th>Diners</th>
+                      </table>";
+
     while ( $row = $queryResult->fetch(PDO::FETCH_ASSOC) ) {
-        $queryData = "
-                <tr>
-                <label for 'id'>Employee ID: </label><input type='text' name='id' value={$row['id']} readonly><br><br>
-                <label for 'fname'>First Name: </label><input type='text' name='fname' value={$row['fname']} readonly><br><br>
-                <label for 'lname'>Last Name: </label><input type='text' name='lname' value={$row['lname']} readonly><br><br>
-                <label for 'id'>Reservation Day: </label><input type='text' name='id' value={$row['dayof']} readonly><br><br>
-                <label for 'fname'>Reservation Time: </label><input type='text' name='fname' value={$row['timeof']} readonly><br><br>
-                <label for 'lname'>Diners: </label><input type='text' name='lname' value={$row['diners']} readonly><br><br>
-                ";
+        $queryData .= "
+                      <table>
+                      <th>{$row['dayof']}</th>
+                      <th>{$row['timeof']}</th>
+                      <th>{$row['diners']}</th>
+                      </table>";
     }
 
 } catch (PDOException $e) {

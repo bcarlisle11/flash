@@ -37,6 +37,7 @@ img {
 	width: 60%;
 	height: 47.5%;
 	border-radius: 25px;
+	text-decoration-color: aliceblue; ;
 }
 
 
@@ -177,4 +178,9 @@ form {
 #submit{
 	margin: auto;
 	float: none;
+}
+
+table, th {
+	border: 1px solid dimgrey;
+	text-align: center;
 }
