@@ -9,14 +9,14 @@ echo "<script type='text/javascript' src='../script/reservations.js'></script>";
 <html>
 <head lang="en">
     <meta charset="UTF-8">
-    <title>Reservations</title>
+    <title>Make A Reservation</title>
     <link rel="stylesheet" href="../css/flash.css">
 </head>
 <body>
 <main id="reservation_home">
-        <?php
-        include_once"pageNav.php"
-        ?>
+    <?php
+    include_once"pageNav.php"
+    ?>
     <?php
     include_once "resForm.php"
     ?>
@@ -26,4 +26,3 @@ echo "<script type='text/javascript' src='../script/reservations.js'></script>";
 </div>
 </body>
 </html>
-
