@@ -18,8 +18,6 @@ function getPDO($dbname)
 }
 ?>
 
-?>
-
 
 
 <!DOCTYPE html>

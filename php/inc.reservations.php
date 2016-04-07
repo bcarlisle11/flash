@@ -35,7 +35,6 @@ function dropPhp($name, array $myArr, $chosen=null)
     $drop .= '</select>'."\n";
 
     return $drop;
-    echo $drop;
 }
 
 function validateForm($input) {
