@@ -5,9 +5,9 @@ echo "<script type='text/javascript' src='../script/reservations.js'></script>";
 try {
     $pdo = getPDO('flash');
 
-    $id = $_POST['id'];
+    $id = $_POST['emp_id'];
 
-    $sql = "SELECT `id`, `fname`, `lname`, `diners`, `dayof`, `timeof` FROM `reservations` WHERE id = $id";
+    $sql = "SELECT `emp_id`, `res_id`, `diners`, `dayof`, `timeof` FROM `reservations` WHERE emp_id = $id";
 
     $queryResult = $pdo->query($sql);
 

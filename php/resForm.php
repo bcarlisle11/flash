@@ -8,11 +8,10 @@
 ?>
 <div method="post" id="res_section">
     <div id="form" class="center">
+        <br><br>
         Please fill in all required fields to reserve a table:<br><br>
         <form method ="post" action="addRes.php">
-            <label for "id">Employee ID: </label><input type="text" name="id" value=""><br><br>
-            <label for "fname">First Name: </label><input type="text" name="fname" value=""><br><br>
-            <label for "lname">Last Name: </label><input type="text" name="lname" value=""><br><br>
+            <label for "emp_id">Employee ID: </label><input type="text" name="id" value=""><br><br>
             <label for "dayof">Reservation Day:</label>
             <?php
             $name = 'dropResDay';

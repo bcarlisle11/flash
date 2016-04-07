@@ -6,7 +6,7 @@ echo "<script type='text/javascript' src='../script/reservations.js'></script>";
 
 
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/html">
+<html>
 <head lang="en">
     <meta charset="UTF-8">
     <title>Reservations</title>

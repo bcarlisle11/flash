@@ -11,23 +11,35 @@ echo "<script type='text/javascript' src='../script/reservations.js'></script>";
     try {
         $pdo = getPDO('flash');
 
-        $id = $_POST['id'];
-        $fname = $_POST['fname'];
-        $lname = $_POST['lname'];
+        $id = $_POST['emp_id'];
         $time = $_POST['time'];
         $day = $_POST['day'];
         $diners = $_POST['diners'];
+        $res_id = rand(1,500);
 
-        $sql = "INSERT INTO reservations
-              (id,fname,lname,diners,dayof,timeof)
-            VALUES
-              ('$id','$fname','$lname','$diners','$day','$time')";
+        $sql = "SELECT 'emp_id' FROM employee WHERE emp_id = $id";
 
-        $pdo->exec($sql);
-        $pdo = null;
+        $queryResult = $pdo->query($sql);
+
+
+        if($row = $queryResult->fetch(PDO::FETCH_ASSOC)){
+
+            $sql = "INSERT INTO reservations
+                    (emp_id,res_id,diners,dayof,timeof)
+                VALUES
+                    ('$id','$res_id','$diners','$day','$time')";
+
+            $pdo->exec($sql);
+            $pdo = null;
+
+            $queryResult = "You have successfully reserved a table on $day at $time for $diners diners!";
+        } else {
+            $queryResult = "Our records indicate that employee id: $id does not exist.  Please try again with a valid employee id or contact support
+                            by e-mail at tech-support@flashfoods.com or by phone at (618)-333-4444.";
+        }
 
     } catch (PDOException $e) {
-        //echo($e->getMessage());
+        echo($e->getMessage());
     }
 //}
 
@@ -59,4 +71,16 @@ echo "<script type='text/javascript' src='../script/reservations.js'></script>";
     <?php
     include_once"pageNav.php"
     ?>
-   
+    <div method="post" id="res_section">
+        <div id="form" class="center">
+            <form method ="post" action="">
+                <?php echo $queryResult?>
+            </form>
+        </div>
+    </div>
+    <div id="footer">
+        Team Flash
+    </div>
+</body>
+</html>
+
