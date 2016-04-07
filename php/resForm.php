@@ -30,9 +30,11 @@
                 '1:00 P.M.', '1:30 P.M.', '1:45 P.M.', '2:00 P.M.',
                 '2:15 P.M.', '2:30 P.M.', '2:45 P.M.', '3:00 P.M.',
                 '3:15 P.M.', '3:30 P.M.', '3:45 P.M.', '4:00 P.M.');
-            //$chosen = 0;
+            $chosen = $_POST['myArr'];
+            $value = $myArr[$_POST['myArr']];
 
             echo dropPhp($name, $myArr, $chosen);
+            echo $value;
             ?>
             <br><br>
             <label for "diners">Number of Diners:</label>

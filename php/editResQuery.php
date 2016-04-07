@@ -5,34 +5,35 @@ echo "<script type='text/javascript' src='../script/reservations.js'></script>";
 try {
     $pdo = getPDO('flash');
 
-    $id = $_POST['emp_id'];
+    $id = $_POST['id'];
 
-    echo $id;
-
-    $sql ="SELECT `id` FROM employee WHERE id = $id";
+    $sql="SELECT `id` FROM employee WHERE id = $id";
 
     $queryResult = $pdo->query($sql);
-
+    
     if($row = $queryResult->fetch(PDO::FETCH_ASSOC)) {
 
-        $sql="SELECT `emp_id`, `dayof`, `timeof`, `diners` FROM reservations WHERE emp_id = $id";
+
+        $sql = "SELECT `id`, `diners`, `dayof`, `timeof` FROM `reservations` WHERE id = $id";
 
         $queryResult = $pdo->query($sql);
 
         while ($row = $queryResult->fetch(PDO::FETCH_ASSOC)) {
             $queryData = "
-                <label for 'emp_id'>Employee ID: </label><input type='text' name='id' value={$row['id']} readonly><br><br>
+                <label for 'id'>Employee ID: </label><input type='text' name='id' value={$row['id']} readonly><br><br>
                 <label for 'dayof'>Reservation Day: </label><input type='text' name='id' value={$row['dayof']} ><br><br>
                 <label for 'timeof'>Reservation Time: </label><input type='text' name='fname' value={$row['timeof']}><br><br>
                 <label for 'diners'>Diners: </label><input type='text' name='lname' value={$row['diners']}><br><br>
                 ";
         }
+        $pdo = null;
+    } else {
+        $queryData = "Our records indicate that employee id: $id does not exist.  Please try again with a valid employee id or contact support
+                            by e-mail at tech-support@flashfoods.com or by phone at (618)-333-4444.";
     }
 
-    $pdo = null;
-
 } catch (PDOException $e) {
-    //echo($e->getMessage());
+    
 }
 
 
@@ -70,8 +71,8 @@ include_once"pageNav.php"
         <div method="post" id="res_section">
             <div id="form" class="center">
                 Active reservations for employee id <?php echo $id?>:<br><br>
-                <form method ='post' action="">
-                    <?php $queryData?>
+                <form method ='post' action="updateRes.php">
+                    <?php echo $queryData?>
                     <input id='submit' name ='submit' type ='submit'>
                 </form>
             </div>

@@ -14,23 +14,22 @@ try {
     $day = $_POST['dayof'];
     $diners = $_POST['diners'];
 
-    $sql2 = "UPDATE `reservations` 
-            SET `diners`=[$diners],`dayof`=[$day],`timeof`=[$time] 
-            WHERE emp_id=$id";
+    $sql = "UPDATE `reservations` 
+            SET `diners`=$diners,`dayof`=$day,`timeof`=$time 
+            WHERE id=$id";
 
-    $queryResult = $pdo->query($sql2);
+    $queryResult = $pdo->exec($sql);
 
-    while ( $row = $queryResult->fetch(PDO::FETCH_ASSOC) ) {
+    while ($row = $queryResult->fetch(PDO::FETCH_ASSOC) ) {
         $queryData = "
                 <label for 'id'>Employee ID: </label><input type='text' name='id' value={$row['id']} readonly><br><br>
-                <label for 'fname'>First Name: </label><input type='text' name='fname' value={$row['fname']} readonly><br><br>
-                <label for 'lname'>Last Name: </label><input type='text' name='lname' value={$row['lname']}><br><br>
+                <label for 'res_id>Reservation ID:</label>
                 <label for 'id'>Reservation Day: </label><input type='text' name='id' value={$row['dayof']} ><br><br>
                 <label for 'fname'>Reservation Time: </label><input type='text' name='fname' value={$row['timeof']}><br><br>
                 <label for 'lname'>Diners: </label><input type='text' name='lname' value={$row['diners']}><br><br>
                 ";
     }
-    //return $queryData;
+    
 } catch(PDOException $e){
 
 }

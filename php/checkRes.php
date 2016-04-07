@@ -5,13 +5,14 @@ echo "<script type='text/javascript' src='../script/reservations.js'></script>";
 try {
     $pdo = getPDO('flash');
 
-    $id = $_POST['emp_id'];
+    $id = $_POST['id'];
 
-    $sql = "SELECT `emp_id`, `res_id`, `diners`, `dayof`, `timeof` FROM `reservations` WHERE emp_id = $id";
+    $sql = "SELECT `id`, `res_id`, `diners`, `dayof`, `timeof` FROM `reservations` WHERE id = $id";
 
     $queryResult = $pdo->query($sql);
 
     $queryData = "    <table>
+                      <th>Reservation ID</th>
                       <th>Reservation Day</th>
                       <th>Reservation Time</th>
                       <th>Diners</th>
@@ -20,10 +21,12 @@ try {
     while ( $row = $queryResult->fetch(PDO::FETCH_ASSOC) ) {
         $queryData .= "
                       <table>
+                      <th>{$row['res_id']}</th>
                       <th>{$row['dayof']}</th>
                       <th>{$row['timeof']}</th>
                       <th>{$row['diners']}</th>
-                      </table>";
+                      </table>
+                      <a href='checkRes.php?editTables'><button type='button'>Edit</button></a>";
     }
 
 } catch (PDOException $e) {
@@ -42,6 +45,25 @@ function getPDO($dbname)
 
     } catch (PDOException $e) {
         //$GLOBALS['ConfirmationMessage'] = $e->getMessage();
+    }
+}
+
+function editTable(){
+    try {
+        $pdo = getPDO();
+
+        $id = $_POST['id'];
+        $day = $_POST['dayof'];
+        $time = $_POST['timeof'];
+        $diners = $_POST['diners'];
+
+        $sql = "SELECT `res_id` FROM reservation WHERE id=$id";
+
+        $pdo->exec($sql);
+        $pdo = null;
+
+    } catch (PDOException $e) {
+        echo ($e->getMessage());
     }
 }
 

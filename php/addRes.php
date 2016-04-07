@@ -11,13 +11,13 @@ echo "<script type='text/javascript' src='../script/reservations.js'></script>";
     try {
         $pdo = getPDO('flash');
 
-        $id = $_POST['emp_id'];
+        $id = $_POST['id'];
         $time = $_POST['time'];
         $day = $_POST['day'];
         $diners = $_POST['diners'];
         $res_id = rand(1,500);
 
-        $sql = "SELECT 'emp_id' FROM employee WHERE emp_id = $id";
+        $sql = "SELECT `id` FROM employee WHERE id = $id";
 
         $queryResult = $pdo->query($sql);
 
@@ -25,7 +25,7 @@ echo "<script type='text/javascript' src='../script/reservations.js'></script>";
         if($row = $queryResult->fetch(PDO::FETCH_ASSOC)){
 
             $sql = "INSERT INTO reservations
-                    (emp_id,res_id,diners,dayof,timeof)
+                    (id,res_id,diners,dayof,timeof)
                 VALUES
                     ('$id','$res_id','$diners','$day','$time')";
 

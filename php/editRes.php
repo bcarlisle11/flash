@@ -21,7 +21,7 @@ echo "<script type='text/javascript' src='../script/reservations.js'></script>";
         <div id="form" class="center">
             Please insert the id you would like to edit a reservation for:<br><br>
             <form method ="post" action="editResQuery.php">
-                <label for "emp_id">Employee ID: </label><input type="text" name="id" value=""><br><br>
+                <label for "id">Employee ID: </label><input type="text" name="id" value=""><br><br>
                 <input id="submit" name ="submit" type ="submit">
             </form>
         </div>
