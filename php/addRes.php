@@ -12,8 +12,8 @@ echo "<script type='text/javascript' src='../script/reservations.js'></script>";
         $pdo = getPDO('flash');
 
         $id = $_POST['id'];
-        $time = $_POST['time'];
-        $day = $_POST['day'];
+        $time = $_POST['timeof'];
+        $day = $_POST['dayof'];
         $diners = $_POST['diners'];
         $res_id = rand(1,500);
 
@@ -39,7 +39,8 @@ echo "<script type='text/javascript' src='../script/reservations.js'></script>";
         }
 
     } catch (PDOException $e) {
-        echo($e->getMessage());
+        echo "<script type='text/javascript'>alert('You must specify a value for all fields')</script>";
+        //echo($e->getMessage());
     }
 //}
 

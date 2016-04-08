@@ -24,26 +24,49 @@
             ?>
             <br><br>
             <label for "timeof">Reservation Time:</label>
+            <select id="time" name="time">
+                <option value="choose">Select Time</option>
+                <option value="12:00">12:00 P.M.</option>
+                <option value="12:15">12:15 P.M.</option>
+                <option value="12:30">12:30 P.M.</option>
+                <option value="12:45">12:45 P.M.</option>
+                <option value="1:00">1:00 P.M.</option>
+                <option value="1:15">1:15 P.M.</option>
+                <option value="1:30">1:30 P.M.</option>
+                <option value="1:45">1:45 P.M.</option>
+                <option value="2:00">2:00 P.M.</option>
+                <option value="2:15">2:15 P.M.</option>
+                <option value="2:30">2:30 P.M.</option>
+                <option value="2:45">2:45 P.M.</option>
+                <option value="3:00">3:00 P.M.</option>
+                <option value="3:15">3:15 P.M.</option>
+                <option value="3:30">3:30 P.M.</option>
+                <option value="3:45">3:45 P.M.</option>
+                <option value="4:00">4:00 P.M.</option>
+            </select>
             <?php
-            $name = 'dropResTime';
-            $myArr = array('12:00 P.M.', '12:15 P.M.', '12:30 P.M.', '12:45 P.M.',
-                '1:00 P.M.', '1:30 P.M.', '1:45 P.M.', '2:00 P.M.',
-                '2:15 P.M.', '2:30 P.M.', '2:45 P.M.', '3:00 P.M.',
-                '3:15 P.M.', '3:30 P.M.', '3:45 P.M.', '4:00 P.M.');
-            $chosen = $_POST['myArr'];
-            $value = $myArr[$_POST['myArr']];
-
-            echo dropPhp($name, $myArr, $chosen);
-            echo $value;
-            ?>
+            //gets the time from the drop box
+            if($_POST['submit'] && $_POST['submit'] !=0){
+                $time = $_POST['time'];
+            } ?>
             <br><br>
             <label for "diners">Number of Diners:</label>
+            <select>
+                <option value="choose">Select # of Diners</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+            </select>
             <?php
-            $name = 'dropDiners';
-            $myArr = array('1', '2', '3', '4', '5', '6', '7', '8');
-            //$chosen = 0;
-
-            echo dropPhp($name, $myArr, $chosen);
+            //gets the number of diners from the dropbox
+            if($_POST['submit'] && $_POST['submit'] !=0){
+                $diners = $_POST['diners'];
+            }
             ?>
             <br><br>
             <input id="submit" name ="submit" type ="submit">
