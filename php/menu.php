@@ -6,7 +6,17 @@
  */
 
 include_once 'pageNav.php';
+
 ?>
+<script>
+   
+    function itemSelect(td){
+        
+        //window.open();
+    }
+        
+   
+</script>
 <!DOCTYPE html>
 <html>
     <head>
@@ -47,7 +57,7 @@ include_once 'pageNav.php';
 
                     </tr>
                     <tr>
-                        <td class="menuItem">Baked Chicken</td>
+                        <td class="menuItem" onclick="itemSelect(this);">Baked Chicken</td>
                         <td>Cal: 400 <br> $5.00</td>
                         <td class="menuItem">Tacos</td>
                         <td>Cal: 400 <br> $5.00</td>

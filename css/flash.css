@@ -196,6 +196,10 @@ th, td {
     padding: 5px;
 }
 
+td.menuItem:hover{
+    background-color: gray;
+}
+
 #entreeRow, #sideRow, #specialRow{
     font-size: larger;
     text-align: center;
