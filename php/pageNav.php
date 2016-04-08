@@ -11,7 +11,7 @@
     <img class ="top-right" src="../flash.jpg" alt="flash" style="...">
     </header>
 <ul>
-    <li><a href="../home.html">Menu</a></li>
+    <li><a href="menu.php">Menu</a></li>
     <li><a href="itemList.html">Items</a></li>
     <li class="dropdown">
         <a href="javascript:void(0)" class="dropdown_btn" onclick="dropDownList()">Reservations</a>

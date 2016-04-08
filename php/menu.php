@@ -11,8 +11,7 @@ include_once 'pageNav.php';
 <script>
    
     function itemSelect(td){
-        
-        //window.open();
+        window.open("items.php/?="+td.innerHTML);
     }
         
    
