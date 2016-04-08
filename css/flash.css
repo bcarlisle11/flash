@@ -183,4 +183,35 @@ form {
 table, th {
 	border: 1px solid dimgrey;
 	text-align: center;
+        border-collapse: collapse;
+        
+}
+
+th{
+    font-size: larger;
+    font-weight: bolder;
+}
+
+th, td {
+    padding: 5px;
+}
+
+td.menuItem:hover{
+    background-color: gray;
+}
+
+#entreeRow, #sideRow, #specialRow{
+    font-size: larger;
+    text-align: center;
+    border: 2px solid black;
+    background-color: lightgray;
+    font-weight: bolder;
+}
+
+
+
+td.menuItem{
+    text-align: center;
+    font-size: large;
+    font-weight: bold;
 }
