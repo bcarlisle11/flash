@@ -12,9 +12,9 @@ echo "<script type='text/javascript' src='../script/reservations.js'></script>";
         $pdo = getPDO('flash');
 
         $id = $_POST['id'];
-        $time = $_POST['timeof'];
-        $day = $_POST['dayof'];
-        $diners = $_POST['diners'];
+        $time = $_POST['time'];
+        $day = $_POST['day'];
+        $diners = $_POST['diner'];
         $res_id = rand(1,500);
 
         $sql = "SELECT `id` FROM employee WHERE id = $id";

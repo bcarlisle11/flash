@@ -11,13 +11,18 @@ try {
 
     $queryResult = $pdo->query($sql);
 
-    echo '<select name="editDrop">';
+    $queryData = '<select id="editDrop" name="editDrop">';
 
     while ( $row = $queryResult->fetch(PDO::FETCH_ASSOC) ) {
-        $queryData = '<option value="'.$row['res_id'].'">'.$row['id'].'</option>';
-
+        $queryData .= '<option value="' . $row['res_id'] . '">' . $row['res_id'] . '</option>';
     }
 
+    $queryData .='</select>';
+
+    if($_POST['submit'] && $_POST['submit'] != 0)
+    {
+        $res_id=$_POST['editDrop'];
+    }
 
 
 
@@ -107,10 +112,13 @@ include_once"pageNav.php"
 ?>
         <div method="post" id="res_section">
             <div id="form" class="center">
-                Active reservations for employee id <?php echo $id?>:<br><br>
-                <form method ='post' action="updateRes.php">
+                Active Reservations for employee id: <?php echo $id?><br><br>
+                Please choose the reservation id of the reservation you would like to edit:<br><br>
+                <form method ='post' action="updateResForm.php">
+                    Reservation Id:
                     <?php echo $queryData?>
-                    <!--<input id='submit' name ='submit' type ='submit'>-->
+                    <br><br>
+                    <input id='edit' name ='edit' type ='submit' value='Edit'>
                 </form>
             </div>
         </div>
