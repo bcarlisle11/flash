@@ -26,7 +26,7 @@ echo "<script type='text/javascript' src='../script/reservations.js'></script>";
 
             $sql = "INSERT INTO reservations
                     (id,res_id,diners,dayof,timeof)
-                VALUES
+                    VALUES
                     ('$id','$res_id','$diners','$day','$time')";
 
             $pdo->exec($sql);
@@ -39,10 +39,9 @@ echo "<script type='text/javascript' src='../script/reservations.js'></script>";
         }
 
     } catch (PDOException $e) {
-        echo "<script type='text/javascript'>alert('You must specify a value for all fields')</script>";
+        echo "<script type='text/javascript'>alert('You must specify a value for all fields')";
         //echo($e->getMessage());
     }
-//}
 
     function getPDO($dbname)
     {
@@ -84,4 +83,3 @@ echo "<script type='text/javascript' src='../script/reservations.js'></script>";
     </div>
 </body>
 </html>
-

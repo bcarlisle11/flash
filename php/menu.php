@@ -6,6 +6,7 @@
  */
 
 include_once 'pageNav.php';
+echo "<script type='text/javascript' src='../script/reservations.js'></script>";
 
 ?>
 <script>
@@ -22,8 +23,8 @@ include_once 'pageNav.php';
     <head>
         <meta charset="UTF-8">
         <link rel="stylesheet" href="../css/flash.css">
-        <title>Flash Food Court</title>
     </head>
+    <?php include_once "pageNav.php"?>
     <body>
         <main id="menu">
 

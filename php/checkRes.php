@@ -11,7 +11,8 @@ try {
 
     $queryResult = $pdo->query($sql);
 
-    $queryData = "    <table>
+    $queryData = "    <div id='checkRes'>
+                      <table>
                       <th>Reservation ID</th>
                       <th>Reservation Day</th>
                       <th>Reservation Time</th>
@@ -26,7 +27,8 @@ try {
                       <th>{$row['timeof']}</th>
                       <th>{$row['diners']}</th>
                       </table>
-                      <a href='checkRes.php?editTables'><button type='button'>Edit</button></a>";
+                      </div>
+                      <!--<a href='checkRes.php?editTables'><button type='button'>Edit</button></a>-->";
     }
 
 } catch (PDOException $e) {

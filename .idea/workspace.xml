@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5f1e4ffc-a2f5-4268-bcc9-1d06e4503277" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/flash.css" afterPath="$PROJECT_DIR$/css/flash.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/addRes.php" afterPath="$PROJECT_DIR$/php/addRes.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/checkRes.php" afterPath="$PROJECT_DIR$/php/checkRes.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/menu.php" afterPath="$PROJECT_DIR$/php/menu.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/resForm.php" afterPath="$PROJECT_DIR$/php/resForm.php" />
     </list>
     <ignored path="flash.iws" />
@@ -25,21 +29,63 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="flash.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/css/flash.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="229">
+              <caret line="196" column="1" selection-start-line="196" selection-start-column="1" selection-end-line="196" selection-end-column="1" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="menu.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/php/menu.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="60">
+              <caret line="8" column="80" selection-start-line="8" selection-start-column="80" selection-end-line="8" selection-end-column="80" />
+              <folding>
+                <marker date="1460147084000" expanded="true" signature="591:609" placeholder="..." />
+                <marker date="1460147084000" expanded="true" signature="864:899" placeholder="..." />
+                <marker date="1460147084000" expanded="true" signature="1300:1337" placeholder="..." />
+                <marker date="1460147084000" expanded="true" signature="1617:1649" placeholder="..." />
+                <marker date="1460147084000" expanded="true" signature="2004:2039" placeholder="..." />
+                <marker date="1460147084000" expanded="true" signature="2656:2688" placeholder="..." />
+                <marker date="1460147084000" expanded="true" signature="3028:3063" placeholder="..." />
+                <marker date="1460147084000" expanded="true" signature="3628:3663" placeholder="..." />
+                <marker date="1460147084000" expanded="true" signature="4242:4274" placeholder="..." />
+                <marker date="1460147084000" expanded="true" signature="4639:4674" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="flashDB.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/db/flashDB.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="135">
+              <caret line="9" column="45" selection-start-line="9" selection-start-column="45" selection-end-line="9" selection-end-column="45" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="addRes.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/php/addRes.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="11" column="31" selection-start-line="11" selection-start-column="31" selection-end-line="11" selection-end-column="31" />
+            <state relative-caret-position="-672">
+              <caret line="6" column="3" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="3" />
               <folding>
-                <marker date="1460071292000" expanded="true" signature="411:412" placeholder="SELECT EXIST... " />
-                <marker date="1460071292000" expanded="true" signature="411:760" placeholder="SELECT id FR... employee" />
-                <marker date="1460071292000" expanded="true" signature="429:465" placeholder="SELECT 'id' employee" />
-                <marker date="1460071292000" expanded="true" signature="429:466" placeholder="SELECT `id` employee" />
-                <marker date="1460071292000" expanded="true" signature="596:758" placeholder="INSERT INTO reservations... " />
-                <marker date="1460071292000" expanded="true" signature="1279:1522" placeholder="..." />
-                <marker date="1460071292000" expanded="true" signature="1418:1522" placeholder="{...}" />
-                <marker date="1460071292000" expanded="true" signature="1471:1522" placeholder="{...}" />
-                <marker date="1460071292000" expanded="true" signature="1948:1958" placeholder="..." />
+                <marker date="1460146429000" expanded="true" signature="411:412" placeholder="SELECT EXIST... " />
+                <marker date="1460146429000" expanded="true" signature="411:764" placeholder="SELECT id FR... employee" />
+                <marker date="1460146429000" expanded="true" signature="429:465" placeholder="SELECT 'id' employee" />
+                <marker date="1460146429000" expanded="true" signature="429:466" placeholder="SELECT `id` employee" />
+                <marker date="1460146429000" expanded="true" signature="596:762" placeholder="INSERT INTO reservations... " />
+                <marker date="1460146429000" expanded="true" signature="1283:1513" placeholder="..." />
+                <marker date="1460146429000" expanded="true" signature="1334:1513" placeholder="..." />
+                <marker date="1460146429000" expanded="true" signature="1409:1513" placeholder="{...}" />
+                <marker date="1460146429000" expanded="true" signature="1462:1513" placeholder="{...}" />
+                <marker date="1460146429000" expanded="true" signature="1939:1949" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -58,33 +104,36 @@
       <file leaf-file-name="checkRes.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/php/checkRes.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="28" column="95" selection-start-line="28" selection-start-column="95" selection-end-line="28" selection-end-column="95" />
+            <state relative-caret-position="331">
+              <caret line="88" column="42" selection-start-line="88" selection-start-column="42" selection-end-line="88" selection-end-column="42" />
               <folding>
-                <marker date="1460068776000" expanded="true" signature="194:275" placeholder="SELECT `emp_... reservations" />
-                <marker date="1460068776000" expanded="true" signature="194:276" placeholder="SELECT `id`,... reservations" />
-                <marker date="1460068776000" expanded="true" signature="194:319" placeholder="SELECT `emp_... reservations" />
-                <marker date="1460068776000" expanded="true" signature="350:560" placeholder="..." />
-                <marker date="1460068776000" expanded="true" signature="678:727" placeholder="..." />
-                <marker date="1460068776000" expanded="true" signature="678:821" placeholder="..." />
-                <marker date="1460068776000" expanded="true" signature="678:900" placeholder="..." />
-                <marker date="1460068776000" expanded="true" signature="1625:1663" placeholder="SELECT `res_... reservation" />
-                <marker date="1460068776000" expanded="true" signature="1625:1667" placeholder="SELECT `res_... reservation" />
-                <marker date="1460068776000" expanded="true" signature="1625:1668" placeholder="SELECT `res_... reservation" />
-                <marker date="1460068776000" expanded="true" signature="1631:1632" placeholder="UPDATE reser... " />
-                <marker date="1460068776000" expanded="true" signature="1831:1847" placeholder="..." />
-                <marker date="1460068776000" expanded="true" signature="1998:2012" placeholder="..." />
+                <marker date="1460146685000" expanded="true" signature="194:275" placeholder="SELECT `emp_... reservations" />
+                <marker date="1460146685000" expanded="true" signature="194:276" placeholder="SELECT `id`,... reservations" />
+                <marker date="1460146685000" expanded="true" signature="194:319" placeholder="SELECT `emp_... reservations" />
+                <marker date="1460146685000" expanded="true" signature="362:602" placeholder="..." />
+                <marker date="1460146685000" expanded="true" signature="392:602" placeholder="..." />
+                <marker date="1460146685000" expanded="true" signature="720:769" placeholder="..." />
+                <marker date="1460146685000" expanded="true" signature="720:863" placeholder="..." />
+                <marker date="1460146685000" expanded="true" signature="720:942" placeholder="..." />
+                <marker date="1460146685000" expanded="true" signature="1703:1741" placeholder="SELECT `res_... reservation" />
+                <marker date="1460146685000" expanded="true" signature="1703:1745" placeholder="SELECT `res_... reservation" />
+                <marker date="1460146685000" expanded="true" signature="1703:1746" placeholder="SELECT `res_... reservation" />
+                <marker date="1460146685000" expanded="true" signature="1709:1710" placeholder="UPDATE reser... " />
+                <marker date="1460146685000" expanded="true" signature="1909:1925" placeholder="..." />
+                <marker date="1460146685000" expanded="true" signature="2076:2090" placeholder="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="activeRes.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/php/activeRes.php">
+      <file leaf-file-name="pageNav.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/php/pageNav.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="24" column="16" selection-start-line="24" selection-start-column="16" selection-end-line="24" selection-end-column="65" />
-              <folding />
+            <state relative-caret-position="150">
+              <caret line="10" column="32" selection-start-line="10" selection-start-column="32" selection-end-line="10" selection-end-column="46" />
+              <folding>
+                <element signature="e#6#92#0#PHP" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -102,10 +151,12 @@
       <file leaf-file-name="resForm.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/php/resForm.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="556">
-              <caret line="68" column="13" selection-start-line="68" selection-start-column="13" selection-end-line="68" selection-end-column="13" />
+            <state relative-caret-position="135">
+              <caret line="9" column="34" selection-start-line="9" selection-start-column="34" selection-end-line="9" selection-end-column="34" />
               <folding>
                 <element signature="e#6#91#0#PHP" expanded="true" />
+                <element signature="e#2759#2936#0#PHP" expanded="true" />
+                <marker date="1460146429000" expanded="true" signature="2951:2994" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -117,42 +168,6 @@
             <state relative-caret-position="345">
               <caret line="23" column="30" selection-start-line="23" selection-start-column="30" selection-end-line="23" selection-end-column="30" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="editResQuery.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/php/editResQuery.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="9" column="30" selection-start-line="9" selection-start-column="30" selection-end-line="9" selection-end-column="30" />
-              <folding>
-                <marker date="1460060294000" expanded="true" signature="192:228" placeholder="SELECT `id` emloyee" />
-                <marker date="1460060294000" expanded="true" signature="192:229" placeholder="SELECT `id` employee" />
-                <marker date="1460060294000" expanded="true" signature="352:423" placeholder="SELECT 'emp_... reservation" />
-                <marker date="1460060294000" expanded="true" signature="352:424" placeholder="SELECT `id`,... reservations" />
-                <marker date="1460060294000" expanded="true" signature="2247:2290" placeholder="..." />
-                <marker date="1460060294000" expanded="true" signature="2247:2322" placeholder="..." />
-                <marker date="1460060294000" expanded="true" signature="2247:2337" placeholder="..." />
-                <marker date="1460060294000" expanded="true" signature="2247:2344" placeholder="..." />
-                <marker date="1460060294000" expanded="true" signature="2247:2352" placeholder="..." />
-                <marker date="1460060294000" expanded="true" signature="2247:2359" placeholder="..." />
-                <marker date="1460060294000" expanded="true" signature="2247:2385" placeholder="..." />
-                <marker date="1460060294000" expanded="true" signature="2445:2483" placeholder="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="updateRes.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/php/updateRes.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="31" column="4" selection-start-line="31" selection-start-column="4" selection-end-line="31" selection-end-column="4" />
-              <folding>
-                <element signature="e#6#91#0#PHP" expanded="true" />
-                <marker date="1460067475000" expanded="true" signature="255:361" placeholder="UPDATE `rese... " />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -186,7 +201,6 @@
         <option value="$PROJECT_DIR$/db/mysql-inc.arcadeDB.php" />
         <option value="$PROJECT_DIR$/db/flashDB.php" />
         <option value="$PROJECT_DIR$/php/resHome.php" />
-        <option value="$PROJECT_DIR$/css/flash.css" />
         <option value="$PROJECT_DIR$/php/inc.reservations.php" />
         <option value="$PROJECT_DIR$/php/reservations.php" />
         <option value="$PROJECT_DIR$/php/pageNav.php" />
@@ -195,9 +209,11 @@
         <option value="$PROJECT_DIR$/php/activeRes.php" />
         <option value="$PROJECT_DIR$/php/editResQuery.php" />
         <option value="$PROJECT_DIR$/php/updateRes.php" />
-        <option value="$PROJECT_DIR$/php/checkRes.php" />
         <option value="$PROJECT_DIR$/php/addRes.php" />
         <option value="$PROJECT_DIR$/php/resForm.php" />
+        <option value="$PROJECT_DIR$/php/checkRes.php" />
+        <option value="$PROJECT_DIR$/php/menu.php" />
+        <option value="$PROJECT_DIR$/css/flash.css" />
       </list>
     </option>
   </component>
@@ -387,15 +403,15 @@
       <workItem from="1459290692417" duration="2000" />
       <workItem from="1459290699349" duration="4225000" />
       <workItem from="1459296572315" duration="36146000" />
-      <workItem from="1459882224950" duration="31585000" />
+      <workItem from="1459882224950" duration="37516000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="71958000" />
+    <option name="totallyTimeSpent" value="77889000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="9" y="23" width="1271" height="722" extended-state="1" />
+    <frame x="9" y="23" width="1271" height="722" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17387883" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -465,15 +481,16 @@
         <state relative-caret-position="450">
           <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
           <folding>
-            <marker date="1460071292000" expanded="true" signature="411:412" placeholder="SELECT EXIST... " />
-            <marker date="1460071292000" expanded="true" signature="411:760" placeholder="SELECT id FR... employee" />
-            <marker date="1460071292000" expanded="true" signature="429:465" placeholder="SELECT 'id' employee" />
-            <marker date="1460071292000" expanded="true" signature="429:466" placeholder="SELECT `id` employee" />
-            <marker date="1460071292000" expanded="true" signature="596:758" placeholder="INSERT INTO reservations... " />
-            <marker date="1460071292000" expanded="true" signature="1279:1522" placeholder="..." />
-            <marker date="1460071292000" expanded="true" signature="1418:1522" placeholder="{...}" />
-            <marker date="1460071292000" expanded="true" signature="1471:1522" placeholder="{...}" />
-            <marker date="1460071292000" expanded="true" signature="1948:1958" placeholder="..." />
+            <marker date="1460146429000" expanded="true" signature="411:412" placeholder="SELECT EXIST... " />
+            <marker date="1460146429000" expanded="true" signature="411:764" placeholder="SELECT id FR... employee" />
+            <marker date="1460146429000" expanded="true" signature="429:465" placeholder="SELECT 'id' employee" />
+            <marker date="1460146429000" expanded="true" signature="429:466" placeholder="SELECT `id` employee" />
+            <marker date="1460146429000" expanded="true" signature="596:762" placeholder="INSERT INTO reservations... " />
+            <marker date="1460146429000" expanded="true" signature="1283:1513" placeholder="..." />
+            <marker date="1460146429000" expanded="true" signature="1334:1513" placeholder="..." />
+            <marker date="1460146429000" expanded="true" signature="1409:1513" placeholder="{...}" />
+            <marker date="1460146429000" expanded="true" signature="1462:1513" placeholder="{...}" />
+            <marker date="1460146429000" expanded="true" signature="1939:1949" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -492,6 +509,8 @@
           <caret line="47" column="30" selection-start-line="47" selection-start-column="30" selection-end-line="47" selection-end-column="30" />
           <folding>
             <element signature="e#6#91#0#PHP" expanded="true" />
+            <element signature="e#2759#2936#0#PHP" expanded="true" />
+            <marker date="1460146429000" expanded="true" signature="2951:2994" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -572,29 +591,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/flash.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1186">
-          <caret line="183" column="30" selection-start-line="183" selection-start-column="30" selection-end-line="183" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/home.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
           <caret line="10" column="25" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="25" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/php/pageNav.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="32" selection-start-line="10" selection-start-column="32" selection-end-line="10" selection-end-column="46" />
-          <folding>
-            <element signature="e#6#92#0#PHP" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -608,14 +609,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/db/flashDB.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="45" selection-start-line="9" selection-start-column="45" selection-end-line="9" selection-end-column="45" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/php/updateRes.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
@@ -624,14 +617,6 @@
             <element signature="e#6#91#0#PHP" expanded="true" />
             <marker date="1460067475000" expanded="true" signature="255:361" placeholder="UPDATE `rese... " />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/php/activeRes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="24" column="16" selection-start-line="24" selection-start-column="16" selection-end-line="24" selection-end-column="65" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -656,18 +641,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/php/editRes.php">
+    <entry file="file://$PROJECT_DIR$/php/activeRes.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="23" column="30" selection-start-line="23" selection-start-column="30" selection-end-line="23" selection-end-column="30" />
+        <state relative-caret-position="360">
+          <caret line="24" column="65" selection-start-line="24" selection-start-column="65" selection-end-line="24" selection-end-column="65" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/php/makeRes.php">
+    <entry file="file://$PROJECT_DIR$/php/editRes.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+        <state relative-caret-position="345">
+          <caret line="23" column="30" selection-start-line="23" selection-start-column="30" selection-end-line="23" selection-end-column="30" />
           <folding />
         </state>
       </provider>
@@ -680,52 +665,109 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/php/checkRes.php">
+    <entry file="file://$PROJECT_DIR$/db/flashDB.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="28" column="95" selection-start-line="28" selection-start-column="95" selection-end-line="28" selection-end-column="95" />
-          <folding>
-            <marker date="1460068776000" expanded="true" signature="194:275" placeholder="SELECT `emp_... reservations" />
-            <marker date="1460068776000" expanded="true" signature="194:276" placeholder="SELECT `id`,... reservations" />
-            <marker date="1460068776000" expanded="true" signature="194:319" placeholder="SELECT `emp_... reservations" />
-            <marker date="1460068776000" expanded="true" signature="350:560" placeholder="..." />
-            <marker date="1460068776000" expanded="true" signature="678:727" placeholder="..." />
-            <marker date="1460068776000" expanded="true" signature="678:821" placeholder="..." />
-            <marker date="1460068776000" expanded="true" signature="678:900" placeholder="..." />
-            <marker date="1460068776000" expanded="true" signature="1625:1663" placeholder="SELECT `res_... reservation" />
-            <marker date="1460068776000" expanded="true" signature="1625:1667" placeholder="SELECT `res_... reservation" />
-            <marker date="1460068776000" expanded="true" signature="1625:1668" placeholder="SELECT `res_... reservation" />
-            <marker date="1460068776000" expanded="true" signature="1631:1632" placeholder="UPDATE reser... " />
-            <marker date="1460068776000" expanded="true" signature="1831:1847" placeholder="..." />
-            <marker date="1460068776000" expanded="true" signature="1998:2012" placeholder="..." />
-          </folding>
+        <state relative-caret-position="135">
+          <caret line="9" column="45" selection-start-line="9" selection-start-column="45" selection-end-line="9" selection-end-column="45" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/php/resForm.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="556">
-          <caret line="68" column="13" selection-start-line="68" selection-start-column="13" selection-end-line="68" selection-end-column="13" />
+        <state relative-caret-position="135">
+          <caret line="9" column="34" selection-start-line="9" selection-start-column="34" selection-end-line="9" selection-end-column="34" />
           <folding>
             <element signature="e#6#91#0#PHP" expanded="true" />
+            <element signature="e#2759#2936#0#PHP" expanded="true" />
+            <marker date="1460146429000" expanded="true" signature="2951:2994" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/php/makeRes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/php/pageNav.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="32" selection-start-line="10" selection-start-column="32" selection-end-line="10" selection-end-column="46" />
+          <folding>
+            <element signature="e#6#92#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/php/checkRes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="331">
+          <caret line="88" column="42" selection-start-line="88" selection-start-column="42" selection-end-line="88" selection-end-column="42" />
+          <folding>
+            <marker date="1460146685000" expanded="true" signature="194:275" placeholder="SELECT `emp_... reservations" />
+            <marker date="1460146685000" expanded="true" signature="194:276" placeholder="SELECT `id`,... reservations" />
+            <marker date="1460146685000" expanded="true" signature="194:319" placeholder="SELECT `emp_... reservations" />
+            <marker date="1460146685000" expanded="true" signature="362:602" placeholder="..." />
+            <marker date="1460146685000" expanded="true" signature="392:602" placeholder="..." />
+            <marker date="1460146685000" expanded="true" signature="720:769" placeholder="..." />
+            <marker date="1460146685000" expanded="true" signature="720:863" placeholder="..." />
+            <marker date="1460146685000" expanded="true" signature="720:942" placeholder="..." />
+            <marker date="1460146685000" expanded="true" signature="1703:1741" placeholder="SELECT `res_... reservation" />
+            <marker date="1460146685000" expanded="true" signature="1703:1745" placeholder="SELECT `res_... reservation" />
+            <marker date="1460146685000" expanded="true" signature="1703:1746" placeholder="SELECT `res_... reservation" />
+            <marker date="1460146685000" expanded="true" signature="1709:1710" placeholder="UPDATE reser... " />
+            <marker date="1460146685000" expanded="true" signature="1909:1925" placeholder="..." />
+            <marker date="1460146685000" expanded="true" signature="2076:2090" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/flash.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="229">
+          <caret line="196" column="1" selection-start-line="196" selection-start-column="1" selection-end-line="196" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/php/menu.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="8" column="80" selection-start-line="8" selection-start-column="80" selection-end-line="8" selection-end-column="80" />
+          <folding>
+            <marker date="1460147084000" expanded="true" signature="591:609" placeholder="..." />
+            <marker date="1460147084000" expanded="true" signature="864:899" placeholder="..." />
+            <marker date="1460147084000" expanded="true" signature="1300:1337" placeholder="..." />
+            <marker date="1460147084000" expanded="true" signature="1617:1649" placeholder="..." />
+            <marker date="1460147084000" expanded="true" signature="2004:2039" placeholder="..." />
+            <marker date="1460147084000" expanded="true" signature="2656:2688" placeholder="..." />
+            <marker date="1460147084000" expanded="true" signature="3028:3063" placeholder="..." />
+            <marker date="1460147084000" expanded="true" signature="3628:3663" placeholder="..." />
+            <marker date="1460147084000" expanded="true" signature="4242:4274" placeholder="..." />
+            <marker date="1460147084000" expanded="true" signature="4639:4674" placeholder="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/php/addRes.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="31" selection-start-line="11" selection-start-column="31" selection-end-line="11" selection-end-column="31" />
+        <state relative-caret-position="-672">
+          <caret line="6" column="3" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="3" />
           <folding>
-            <marker date="1460071292000" expanded="true" signature="411:412" placeholder="SELECT EXIST... " />
-            <marker date="1460071292000" expanded="true" signature="411:760" placeholder="SELECT id FR... employee" />
-            <marker date="1460071292000" expanded="true" signature="429:465" placeholder="SELECT 'id' employee" />
-            <marker date="1460071292000" expanded="true" signature="429:466" placeholder="SELECT `id` employee" />
-            <marker date="1460071292000" expanded="true" signature="596:758" placeholder="INSERT INTO reservations... " />
-            <marker date="1460071292000" expanded="true" signature="1279:1522" placeholder="..." />
-            <marker date="1460071292000" expanded="true" signature="1418:1522" placeholder="{...}" />
-            <marker date="1460071292000" expanded="true" signature="1471:1522" placeholder="{...}" />
-            <marker date="1460071292000" expanded="true" signature="1948:1958" placeholder="..." />
+            <marker date="1460146429000" expanded="true" signature="411:412" placeholder="SELECT EXIST... " />
+            <marker date="1460146429000" expanded="true" signature="411:764" placeholder="SELECT id FR... employee" />
+            <marker date="1460146429000" expanded="true" signature="429:465" placeholder="SELECT 'id' employee" />
+            <marker date="1460146429000" expanded="true" signature="429:466" placeholder="SELECT `id` employee" />
+            <marker date="1460146429000" expanded="true" signature="596:762" placeholder="INSERT INTO reservations... " />
+            <marker date="1460146429000" expanded="true" signature="1283:1513" placeholder="..." />
+            <marker date="1460146429000" expanded="true" signature="1334:1513" placeholder="..." />
+            <marker date="1460146429000" expanded="true" signature="1409:1513" placeholder="{...}" />
+            <marker date="1460146429000" expanded="true" signature="1462:1513" placeholder="{...}" />
+            <marker date="1460146429000" expanded="true" signature="1939:1949" placeholder="..." />
           </folding>
         </state>
       </provider>
