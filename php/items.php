@@ -26,15 +26,23 @@ if (! is_null($_GET)) {
 
         <main>
 
-            <div id="item">
+            <?php
+            
+            if(is_null($item)){
+                // output item page
+                echo("
+            <div id=\"item\">
 
-                <?php
-                echo $item;
-                ?> 
+                
 
             </div>
-
-
+                        ");
+            } else {
+                // ouput item select page
+                
+            }
+            
+                    ?>
         </main>
 
         <div id="footer">
