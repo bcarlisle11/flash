@@ -1,3 +1,4 @@
+<base href="/flash/php/items.php"/> <!-- hax -->
 <?php
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -7,7 +8,7 @@
 
 include_once 'pageNav.php';
 $item = "";
-if (is_null(!$_GET)) {
+if (! is_null($_GET)) {
     $item = $_GET['item'];
 }
 ?>
@@ -16,17 +17,23 @@ if (is_null(!$_GET)) {
 
 <html>
     <head>
+
         <meta charset="UTF-8">
-        <link rel="stylesheet" href="../css/flash.css">
+        <link rel="stylesheet" href="/flash/css/flash.css">
         <title>Flash Food Court</title>
     </head>
     <body>
 
         <main>
 
-            <?php
-            echo $item;
-            ?>
+            <div id="item">
+
+                <?php
+                echo $item;
+                ?> 
+
+            </div>
+
 
         </main>
 

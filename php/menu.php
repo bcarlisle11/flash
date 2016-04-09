@@ -17,7 +17,9 @@ include_once 'pageNav.php';
 </script>
 <!DOCTYPE html>
 <html>
+    
     <head>
+        
         <meta charset="UTF-8">
         <link rel="stylesheet" href="../css/flash.css">
         <title>Flash Food Court</title>
