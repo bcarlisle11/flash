@@ -25,9 +25,9 @@
             //echo $selected;
             ?>
             <br><br>
-            <label for "timeof">Reservation Time:</label>
-            <select>
-                <option value="choose">Select Time</option>
+            <label for 'timeof'>Reservation Time:</label>
+            <select name="a">
+                <option value="0">Select Time</option>
                 <option value="12:00">12:00 P.M.</option>
                 <option value="12:15">12:15 P.M.</option>
                 <option value="12:30">12:30 P.M.</option>
@@ -48,10 +48,11 @@
             </select>
             <?php
             //gets the time from the drop box
-            $time = $_POST['timeof'];
-            if($_POST['submit'] && $_POST['submit'] !=0){
-                $time = $_POST['timeof'];
-            } ?>
+            $a=$_POST["timeof"];
+            $time = $a;
+            //if($_POST['submit'] && $_POST['submit'] !=0){
+              //  $time = $_POST['timeof'];
+            //} ?>
             <br><br>
             <label for "diners">Number of Diners:</label>
             <select>
