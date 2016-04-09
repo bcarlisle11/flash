@@ -19,8 +19,27 @@ if (isset($_GET['name'])) {
 //    } elseif (isset($_POST['sideSelect'])) {
 //        echo "you selected sidebutton";
 //    }
-} else{
+} else {
     displayButtons();
+}
+
+function populateTableVars($name, $price, $cals) {
+    
+    
+    
+}
+
+function outputRows() {
+    
+    populateTableVars($name, $price, $cals);
+    
+    for($i = 0; $i <= count($name); $i++){
+        echo("
+        <td>$name[i]</td>
+        <td>$$price[i]</td>
+        <td>$cals[i]</td>
+                ");
+    }
 }
 ?>
 
@@ -77,11 +96,11 @@ if (isset($_GET['name'])) {
                             <th>Price</th>
                             <th>Calories</th>
                         </tr>
-                        <tr>
-                            <td>$name[i]</td>
-                            <td>$$price[i]</td>
-                            <td>$cals[i]</td>
-                        </tr>
+                        <tr>");
+
+                outputRows();
+
+                echo("</tr>
                     </table>
 
                 </div>
