@@ -8,11 +8,19 @@
 
 include_once 'pageNav.php';
 $item = "";
-if (!is_null($_GET)) {
-    $item = $_GET['item'];
-    $price = "pricevalue";
-    $cals  = "calsvalue";
-    $description = "describes the item perfectly!";
+if (isset($_GET['name'])) {
+    displayItem();
+} elseif ($_POST) {
+    displayTable();
+//    if (isset($_POST['entreeSelect'])) {
+//        echo "you selected entreebutton";
+//    } elseif (isset($_POST['specialSelect'])) {
+//        echo "you selected specialbutton";
+//    } elseif (isset($_POST['sideSelect'])) {
+//        echo "you selected sidebutton";
+//    }
+} else{
+    displayButtons();
 }
 ?>
 
@@ -30,28 +38,70 @@ if (!is_null($_GET)) {
         <main>
 
 
-            <div id="itemSelect">
 
-                <button>View Entrees</button>
-                <button>View Specials</button>
-                <button>View Sides</button>
-                
-            </div>
+
+
             <?php
-            if (is_null($item)) {
+
+            function displayButtons() {
+                echo("<div id=\"itemSelect\">
+                <h1>Select Which items to view:</h1>
+                <form action=\"items.php\" method=\"post\">
+                    <button type=\"submit\" name=\"entreeSelect\" value=\"selected\">View Entrees</button>
+                    <button type=\"submit\" name=\"specialSelect\" value=\"selected\">View Specials</button>
+                    <button type=\"submit\" name=\"sideSelect\" value=\"selected\">View Sides</button>
+                </form>
+                ");
+            }
+
+            function displayTable() {
                 // output item select page
+                echo("<div id=\"itemSelect\">
+
+                <h1>Select Which items to view:</h1>
+                <form action=\"items.php\" method=\"post\">
+                    <button type=\"submit\" name=\"entreeSelect\" value=\"selected\">View Entrees</button>
+                    <button type=\"submit\" name=\"specialSelect\" value=\"selected\">View Specials</button>
+                    <button type=\"submit\" name=\"sideSelect\" value=\"selected\">View Sides</button>
+                </form>
                 
-                
-                
-            } else {
+                <div id=\"itemTableDiv\">
+                    <table id=\"itemTable\">
+                        <colgroup>
+                            <col id=\"nameColumn\">
+                            <col id =\"priceColumn\">
+                            <col id =\"calColumn\">
+                        </colgroup>
+                        <tr>
+                            <th>Item Name</th>
+                            <th>Price</th>
+                            <th>Calories</th>
+                        </tr>
+                        <tr>
+                            <td>$name[i]</td>
+                            <td>$$price[i]</td>
+                            <td>$cals[i]</td>
+                        </tr>
+                    </table>
+
+                </div>
+                </div>
+            ");
+            }
+
+            function displayItem() {
                 // output item description page
-//                echo("
-//                    <div id=\"item\">
-//                        <h1>Item Name</h1>
-//                        <p>$$price, Calories: $cals</p>
-//                        <p>$description</p>
-//                    </div>
-//                        ");
+                $item = $_GET['item'];
+                $price = "pricevalue";
+                $cals = "calsvalue";
+                $description = "describes the item perfectly!";
+                echo("
+                    <div id=\"item\">
+                        <h1>Item Name</h1>
+                        <p>$$price, Calories: $cals</p>
+                        <p>$description</p>
+                    </div>
+                        ");
             }
             ?>
         </main>
