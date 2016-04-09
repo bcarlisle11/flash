@@ -5,6 +5,7 @@
  * Date: 4/3/16
  * Time: 10:05 PM
  */
+echo "<script type='text/javascript' src='../script/reservations.js'></script>";
 ?>
 <header id="header">
     <h1>Flash Food Court</h1>

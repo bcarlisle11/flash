@@ -7,6 +7,43 @@ try {
 
     $id = $_POST['id'];
 
+    $sql = "SELECT `id`, `res_id`, `diners`, `dayof`, `timeof` FROM `reservations` WHERE id = $id";
+
+    $queryResult = $pdo->query($sql);
+
+    echo '<select name="editDrop">';
+
+    while ( $row = $queryResult->fetch(PDO::FETCH_ASSOC) ) {
+        $queryData = '<option value="'.$row['res_id'].'">'.$row['id'].'</option>';
+
+    }
+
+
+
+
+
+    /*    $queryData = "
+                          <table>
+                          <th>Reservation ID</th>
+                          <th>Reservation Day</th>
+                          <th>Reservation Time</th>
+                          <th>Diners</th>
+                          </table>";
+
+        while ( $row = $queryResult->fetch(PDO::FETCH_ASSOC) ) {
+            $queryData .= "
+                          <table>
+                          <th>{$row['res_id']}</th>
+                          <th>{$row['dayof']}</th>
+                          <th>{$row['timeof']}</th>
+                          <th>{$row['diners']}</th>
+                          </table>
+                          <input id='editRes' type='submit' value='Edit' align='center'>";
+        }*/
+/*    $pdo = getPDO('flash');
+
+    $id = $_POST['id'];
+
     $sql="SELECT `id` FROM employee WHERE id = $id";
 
     $queryResult = $pdo->query($sql);
@@ -30,7 +67,7 @@ try {
     } else {
         $queryData = "Our records indicate that employee id: $id does not exist.  Please try again with a valid employee id or contact support
                             by e-mail at tech-support@flashfoods.com or by phone at (618)-333-4444.";
-    }
+    }*/
 
 } catch (PDOException $e) {
     
@@ -73,7 +110,7 @@ include_once"pageNav.php"
                 Active reservations for employee id <?php echo $id?>:<br><br>
                 <form method ='post' action="updateRes.php">
                     <?php echo $queryData?>
-                    <input id='submit' name ='submit' type ='submit'>
+                    <!--<input id='submit' name ='submit' type ='submit'>-->
                 </form>
             </div>
         </div>

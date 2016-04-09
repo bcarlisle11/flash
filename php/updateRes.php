@@ -9,14 +9,12 @@
 try {
     $pdo = getPDO('flash');
 
-    $id = $_POST['id'];
+    $res_id = $_POST['res_id'];
     $time = $_POST['timeof'];
     $day = $_POST['dayof'];
     $diners = $_POST['diners'];
 
-    $sql = "UPDATE `reservations` 
-            SET `diners`=$diners,`dayof`=$day,`timeof`=$time 
-            WHERE id=$id";
+    $sql = "SELECT `res_id`, `diners`, `dayof`, `timeof` FROM `reservations` WHERE res_id = $res_id";
 
     $queryResult = $pdo->exec($sql);
 
