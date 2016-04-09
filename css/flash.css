@@ -216,6 +216,19 @@ td.menuItem{
     font-weight: bold;
 }
 
+#item {
+    margin: auto;
+    width: 80%;
+    text-align: center;
+}
+
+#itemselect {
+    margin:auto;
+    width:80%;
+    height: 90%;
+    text-align: center;
+}
+
 input, #editRes {
 	float: none;
 	 margin: auto;

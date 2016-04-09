@@ -8,8 +8,11 @@
 
 include_once 'pageNav.php';
 $item = "";
-if (! is_null($_GET)) {
+if (!is_null($_GET)) {
     $item = $_GET['item'];
+    $price = "pricevalue";
+    $cals  = "calsvalue";
+    $description = "describes the item perfectly!";
 }
 ?>
 
@@ -26,23 +29,31 @@ if (! is_null($_GET)) {
 
         <main>
 
-            <?php
-            
-            if(is_null($item)){
-                // output item page
-                echo("
-            <div id=\"item\">
 
+            <div id="itemSelect">
+
+                <button>View Entrees</button>
+                <button>View Specials</button>
+                <button>View Sides</button>
                 
-
             </div>
-                        ");
-            } else {
-                // ouput item select page
+            <?php
+            if (is_null($item)) {
+                // output item select page
                 
+                
+                
+            } else {
+                // output item description page
+//                echo("
+//                    <div id=\"item\">
+//                        <h1>Item Name</h1>
+//                        <p>$$price, Calories: $cals</p>
+//                        <p>$description</p>
+//                    </div>
+//                        ");
             }
-            
-                    ?>
+            ?>
         </main>
 
         <div id="footer">
