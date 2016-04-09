@@ -12,7 +12,7 @@
     </header>
 <ul>
     <li><a href="menu.php">Menu</a></li>
-    <li><a href="itemList.html">Items</a></li>
+    <li><a href="items.php">Items</a></li>
     <li class="dropdown">
         <a href="javascript:void(0)" class="dropdown_btn" onclick="dropDownList()">Reservations</a>
         <div class="dropdown_class" id="drop_list">

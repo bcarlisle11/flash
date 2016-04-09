@@ -6,15 +6,14 @@
  */
 
 include_once 'pageNav.php';
-
 ?>
 <script>
-   
-    function itemSelect(td){
-        window.open("items.php/?="+td.innerHTML);
+
+    function itemSelect(td) {
+        window.open("items.php/?item=" + td.innerHTML);
     }
-        
-   
+
+
 </script>
 <!DOCTYPE html>
 <html>
