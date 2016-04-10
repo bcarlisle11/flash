@@ -18,10 +18,10 @@ try {
     while ($row = $queryResult->fetch(PDO::FETCH_ASSOC) ) {
         $queryData = "
                 <label for='id'>Employee ID: </label><input type='text' name='id' value='{$row['id']}' readonly><br><br>
-                <label for='res_id'>Reservation ID:</label><input type='text' name='res_id' value='{$row['res_id']}' readonly><br><br>
+                <label for='res_id'>Reservation ID:</label><input type='text' name='res_id' value='$res_id' readonly><br><br>
                 <label for='dayof'>Reservation Day: </label>
                 <select id='day' name='day'>
-                    <option value='0'>{$row['dayof']}</option>
+                    <option value={$row['dayof']}>{$row['dayof']}</option>
                     <option value='Monday'>Monday</option>
                     <option value='Tuesday'>Tuesday</option>
                     <option value='Wednesday'>Wednesday</option>
@@ -31,7 +31,7 @@ try {
                 <br><br>
                 <label for=\"timeof\">Reservation Time:</label>
                 <select id='time' name='time'>
-                    <option value='0'>{$row['timeof']}</option>
+                    <option value={$row['timeof']}>{$row['timeof']}</option>
                     <option value=\"12:00 P.M.\">12:00 P.M.</option>
                     <option value=\"12:15 P.M.\">12:15 P.M.</option>
                     <option value=\"12:30 P.M.\">12:30 P.M.</option>
@@ -55,7 +55,7 @@ try {
                 <br><br>
                 <label for='diners'>Diners: </label>
                 <select id='diner' name='diner'>
-                    <option value='0'>{$row['diners']}</option>
+                    <option value='{$row['diners']}'>{$row['diners']}</option>
                     <option value=\"1\">1</option>
                     <option value=\"2\">2</option>
                     <option value=\"3\">3</option>
@@ -86,6 +86,7 @@ function getPDO($dbname)
     } catch (PDOException $e) {
         //$GLOBALS['ConfirmationMessage'] = $e->getMessage();
     }
+    return $pdo;
 }
 
 ?>
@@ -105,7 +106,7 @@ function getPDO($dbname)
     <div method="post" id="res_section">
         <div id="form" class="center">
             Edit reservation for reservation id <?php echo $res_id?>:<br><br>
-            <form method ='post' action="">
+            <form method ='post' action="updateRes.php">
                 <?php echo $queryData?>
                 <?php
                     if($_POST['submit'] && $_POST['submit'] !=0){

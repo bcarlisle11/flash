@@ -1,5 +1,4 @@
 <?php
-include ('inc.reservations.php');
 echo "<script type='text/javascript' src='../script/reservations.js'></script>";
 
 try {
@@ -45,25 +44,6 @@ function getPDO($dbname)
 
     } catch (PDOException $e) {
         //$GLOBALS['ConfirmationMessage'] = $e->getMessage();
-    }
-}
-
-function editTable(){
-    try {
-        $pdo = getPDO();
-
-        $id = $_POST['id'];
-        $day = $_POST['dayof'];
-        $time = $_POST['timeof'];
-        $diners = $_POST['diners'];
-
-        $sql = "SELECT `res_id` FROM reservation WHERE id=$id";
-
-        $pdo->exec($sql);
-        $pdo = null;
-
-    } catch (PDOException $e) {
-        echo ($e->getMessage());
     }
 }
 

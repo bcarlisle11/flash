@@ -5,7 +5,6 @@
  * Date: 4/4/16
  * Time: 2:40 PM
  */
-include "inc.reservations.php";
 echo "<script type='text/javascript' src='../script/reservations.js'></script>";
 ?>
 <div id="res_section">

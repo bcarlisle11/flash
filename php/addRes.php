@@ -5,7 +5,6 @@
  * Date: 4/4/16
  * Time: 1:28 PM
  */
-//include ('inc.reservations.php');
 echo "<script type='text/javascript' src='../script/reservations.js'></script>";
 
     try {
@@ -32,7 +31,8 @@ echo "<script type='text/javascript' src='../script/reservations.js'></script>";
             $pdo->exec($sql);
             $pdo = null;
 
-            $queryResult = "You have successfully reserved a table on $day at $time for $diners diners!";
+            $queryResult = "You have successfully reserved a table on $day at $time for $diners diners! 
+                            The reservation id is $res_id.  Please note this for your records.";
         } else {
             $queryResult = "Our records indicate that employee id: $id does not exist.  Please try again with a valid employee id or contact support
                             by e-mail at tech-support@flashfoods.com or by phone at (618)-333-4444.";
