@@ -240,3 +240,7 @@ input, #editRes {
 #priceColumn,#calColumn{
     width: 25%;
 }
+
+td.listItem:hover{
+    background-color: gray;
+}

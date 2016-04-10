@@ -12,56 +12,91 @@ $item = "";
 $name;
 $price;
 $cals;
-if (isset($_GET['name'])) {
+if (isset($_GET['item'])) {
     displayItem();
-} elseif ($_POST) {
+} elseif (isset($_POST['typeSelect'])) {
+//    echo($_POST['typeSelect']);
     displayTable();
-//    if (isset($_POST['entreeSelect'])) {
-//        echo "you selected entreebutton";
-//    } elseif (isset($_POST['specialSelect'])) {
-//        echo "you selected specialbutton";
-//    } elseif (isset($_POST['sideSelect'])) {
-//        echo "you selected sidebutton";
-//    }
 } else {
     displayButtons();
 }
 
 function populateTableVars() {
-    
-    $pdo = getPDO('flash');
+    try {
+        $pdo = getPDO('flash');
 
-    $type = $_POST['typeSelected'];
+        $type = $_POST['typeSelect'];
 
-    $sql = "SELECT `itemName`, `itemPrice`, `itemCals`, `itemDesc`, FROM `items` WHERE itemType = $type";
+        $sql = "SELECT `itemName`, `itemPrice`, `itemCal` FROM `items` WHERE itemType = '$type'";
 
-    $queryResult = $pdo->query($sql);
+        $queryResult = $pdo->query($sql);
 
-    $name = $queryResult['itemName'];
-    $price = $queryResult['itemPrice'];
-    $cals = $queryResult['itemCals'];
+        global $name, $price, $cals;
 
-    
-    
-}
 
-function outputRows() {
-    
-    populateTableVars();
-    
-    for($i = 0; $i <= count($name); $i++){
-        echo("
-            <tr>
-        <td>$name[i]</td>
-        <td>$$price[i]</td>
-        <td>$cals[i]</td>
-            </tr>
-                ");
+
+        while ($row = $queryResult->fetch(PDO::FETCH_ASSOC)) {
+
+            $priceFormatted = sprintf('%.2f', $row['itemPrice']);
+            echo("
+                      <tr>
+                        <td class=\"listItem\" onclick=\"itemSelect(this);\">{$row['itemName']}</td>
+                        <td class=\"listItem\" onclick=\"itemSelect(this);\">\${$priceFormatted}</td>
+                        <td class=\"listItem\" onclick=\"itemSelect(this);\">{$row['itemCal']}</td>
+                      
+                          </tr>
+                      
+                          ");
+        }
+    } catch (PDOException $e) {
+        
     }
 }
 
-function getPDO($dbname)
-{
+function outputRows() {
+
+    populateTableVars();
+//    
+//    for($i = 0; $i <= count($name); $i++){
+//        echo("
+//            <tr>
+//        <td>$name[i]</td>
+//        <td>$$price[i]</td>
+//        <td>$cals[i]</td>
+//            </tr>
+//                ");
+//    }
+}
+
+function outputItem() {
+    try {
+        $pdo = getPDO('flash');
+
+        $name = $_GET['item'];
+
+        $sql = "SELECT `itemName`, `itemPrice`, `itemCal`, `itemDesc` FROM `items` WHERE itemName = '$name'";
+
+        $queryResult = $pdo->query($sql);
+
+
+
+        while ($row = $queryResult->fetch(PDO::FETCH_ASSOC)) {
+
+            $priceFormatted = sprintf('%.2f', $row['itemPrice']);
+            echo("
+                    <div id=\"item\">
+                        <h1>{$row['itemName']}</h1>
+                        <p>\${$priceFormatted}, Calories: {$row['itemCal']}</p>
+                        <p>{$row['itemDesc']}</p>
+                    </div>
+                        ");
+        }
+    } catch (PDOException $e) {
+        
+    }
+}
+
+function getPDO($dbname) {
     include('../db/flashDB.php');
 
     try {
@@ -69,16 +104,18 @@ function getPDO($dbname)
         $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
         return $pdo;
-
     } catch (PDOException $e) {
         //$GLOBALS['ConfirmationMessage'] = $e->getMessage();
     }
 }
-
 ?>
 
 <!DOCTYPE html>
-
+<script>
+    function itemSelect(td) {
+        window.open("items.php/?item=" + td.innerHTML, "_self");
+    }
+</script>
 <html>
     <head>
 
@@ -94,10 +131,10 @@ function getPDO($dbname)
 
 
 
-            <?php
+<?php
 
-            function displayButtons() {
-                echo("<div id=\"itemSelect\">
+function displayButtons() {
+    echo("<div id=\"itemSelect\">
                 <h1>Select Which items to view:</h1>
                 <form action=\"items.php\" method=\"post\">
                     <button type=\"submit\" name=\"typeSelect\" value=\"entree\">View Entrees</button>
@@ -105,17 +142,17 @@ function getPDO($dbname)
                     <button type=\"submit\" name=\"typeSelect\" value=\"side\">View Sides</button>
                 </form>
                 ");
-            }
+}
 
-            function displayTable() {
-                // output item select page
-                echo("<div id=\"itemSelect\">
+function displayTable() {
+    // output item select page
+    echo("<div id=\"itemSelect\">
 
                 <h1>Select Which items to view:</h1>
                 <form action=\"items.php\" method=\"post\">
-                    <button type=\"submit\" name=\"entreeSelect\" value=\"selected\">View Entrees</button>
-                    <button type=\"submit\" name=\"specialSelect\" value=\"selected\">View Specials</button>
-                    <button type=\"submit\" name=\"sideSelect\" value=\"selected\">View Sides</button>
+                    <button type=\"submit\" name=\"typeSelect\" value=\"entree\">View Entrees</button>
+                    <button type=\"submit\" name=\"typeSelect\" value=\"special\">View Specials</button>
+                    <button type=\"submit\" name=\"typeSelect\" value=\"side\">View Sides</button>
                 </form>
                 
                 <div id=\"itemTableDiv\">
@@ -132,31 +169,21 @@ function getPDO($dbname)
                         </tr>
                         <tr>");
 
-                outputRows();
+    outputRows();
 
-                echo("</tr>
+    echo("</tr>
                     </table>
 
                 </div>
                 </div>
             ");
-            }
+}
 
-            function displayItem() {
-                // output item description page
-                $item = $_GET['item'];
-                $price = "pricevalue";
-                $cals = "calsvalue";
-                $description = "describes the item perfectly!";
-                echo("
-                    <div id=\"item\">
-                        <h1>Item Name</h1>
-                        <p>$$price, Calories: $cals</p>
-                        <p>$description</p>
-                    </div>
-                        ");
-            }
-            ?>
+function displayItem() {
+    // output item description page
+    outputItem();
+}
+?>
         </main>
 
         <div id="footer">
