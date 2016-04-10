@@ -8,6 +8,10 @@
 
 include_once 'pageNav.php';
 $item = "";
+
+$name;
+$price;
+$cals;
 if (isset($_GET['name'])) {
     displayItem();
 } elseif ($_POST) {
@@ -23,24 +27,54 @@ if (isset($_GET['name'])) {
     displayButtons();
 }
 
-function populateTableVars($name, $price, $cals) {
+function populateTableVars() {
     
+    $pdo = getPDO('flash');
+
+    $type = $_POST['typeSelected'];
+
+    $sql = "SELECT `itemName`, `itemPrice`, `itemCals`, `itemDesc`, FROM `items` WHERE itemType = $type";
+
+    $queryResult = $pdo->query($sql);
+
+    $name = $queryResult['itemName'];
+    $price = $queryResult['itemPrice'];
+    $cals = $queryResult['itemCals'];
+
     
     
 }
 
 function outputRows() {
     
-    populateTableVars($name, $price, $cals);
+    populateTableVars();
     
     for($i = 0; $i <= count($name); $i++){
         echo("
+            <tr>
         <td>$name[i]</td>
         <td>$$price[i]</td>
         <td>$cals[i]</td>
+            </tr>
                 ");
     }
 }
+
+function getPDO($dbname)
+{
+    include('../db/flashDB.php');
+
+    try {
+        $pdo = new PDO(DB_CONNECTION_STRING . ";dbname=$dbname", DB_USER, DB_PWD);
+        $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+        return $pdo;
+
+    } catch (PDOException $e) {
+        //$GLOBALS['ConfirmationMessage'] = $e->getMessage();
+    }
+}
+
 ?>
 
 <!DOCTYPE html>
@@ -66,9 +100,9 @@ function outputRows() {
                 echo("<div id=\"itemSelect\">
                 <h1>Select Which items to view:</h1>
                 <form action=\"items.php\" method=\"post\">
-                    <button type=\"submit\" name=\"entreeSelect\" value=\"selected\">View Entrees</button>
-                    <button type=\"submit\" name=\"specialSelect\" value=\"selected\">View Specials</button>
-                    <button type=\"submit\" name=\"sideSelect\" value=\"selected\">View Sides</button>
+                    <button type=\"submit\" name=\"typeSelect\" value=\"entree\">View Entrees</button>
+                    <button type=\"submit\" name=\"typeSelect\" value=\"special\">View Specials</button>
+                    <button type=\"submit\" name=\"typeSelect\" value=\"side\">View Sides</button>
                 </form>
                 ");
             }
