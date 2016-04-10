@@ -10,7 +10,7 @@ try {
 
     $queryResult = $pdo->query($sql);
 
-    $queryData = "    <table>
+    $queryData = "    <table id='checkRes'>
                       <th>Reservation ID</th>
                       <th>Reservation Day</th>
                       <th>Reservation Time</th>
@@ -19,17 +19,16 @@ try {
 
     while ( $row = $queryResult->fetch(PDO::FETCH_ASSOC) ) {
         $queryData .= "
-                      <table>
+                      <table id='checkRes'>
                       <th>{$row['res_id']}</th>
                       <th>{$row['dayof']}</th>
                       <th>{$row['timeof']}</th>
                       <th>{$row['diners']}</th>
-                      </table>
-                      <!--<a href='checkRes.php?editTables'><button type='button'>Edit</button></a>-->";
+                      </table>";
     }
 
 } catch (PDOException $e) {
-    //echo($e->getMessage());
+    $queryData = "Our records indicate that employee id: $id does not exist.  Please try again.";
 }
 
 function getPDO($dbname)

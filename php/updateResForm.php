@@ -84,7 +84,6 @@ function getPDO($dbname)
         return $pdo;
 
     } catch (PDOException $e) {
-        //$GLOBALS['ConfirmationMessage'] = $e->getMessage();
     }
     return $pdo;
 }

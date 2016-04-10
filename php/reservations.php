@@ -1,5 +1,4 @@
 <?php
-include ('inc.reservations.php');
 echo "<script type='text/javascript' src='../script/reservations.js'></script>";
 ?>
 

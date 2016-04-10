@@ -14,11 +14,6 @@ try {
     $day = $_POST['day'];
     $diners = $_POST['diner'];
 
-    echo $res_id;
-    echo $time;
-    echo $day;
-    echo $diners;
-
     $sql = "UPDATE `reservations` 
             SET `diners` = '$diners', `dayof` = '$day', `timeof` = '$time'
             WHERE `res_id` = $res_id";
@@ -31,7 +26,7 @@ try {
 
 
 } catch (PDOException $e){
-    //nothing
+    $queryData = "Edit unsuccessful.  Please try again.";
 }
 
 function getPDO($dbname)
@@ -45,7 +40,6 @@ function getPDO($dbname)
         return $pdo;
 
     } catch (PDOException $e) {
-        //$GLOBALS['ConfirmationMessage'] = $e->getMessage();
     }
 }
 ?>

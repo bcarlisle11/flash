@@ -172,7 +172,6 @@ table, th {
     border: 1px solid dimgrey;
     text-align: center;
     border-collapse: collapse;
-
 }
 
 th{
@@ -243,4 +242,10 @@ input, #editRes {
 
 td.listItem:hover{
     background-color: gray;
+}
+
+#checkRes {
+    border: 1px solid dimgrey;
+    text-align: center;
+    font-size: medium;
 }
