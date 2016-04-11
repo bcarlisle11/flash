@@ -20,12 +20,12 @@ if(!isset( $_POST['employeeID'], $_POST['password']))
     $message = 'Please enter a valid username and password';
 }
 /*** check the username is the correct length ***/
-elseif (strlen( $_POST['employeeID']) > 20 || strlen($_POST['employeeID']) < 4)
+elseif (strlen( $_POST['employeeID']) > 20)
 {
     $message = 'Incorrect Length for Username';
 }
 /*** check the password is the correct length ***/
-elseif (strlen( $_POST['password']) > 20 || strlen($_POST['password']) < 4)
+elseif (strlen( $_POST['password']) > 20)
 {
     $message = 'Incorrect Length for Password';
 }

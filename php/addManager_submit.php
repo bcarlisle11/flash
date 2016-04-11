@@ -20,12 +20,12 @@ elseif( $_POST['form_token'] != $_SESSION['form_token'])
     $message = 'Invalid form submission';
 }
 /*** check the employeeID is the correct length ***/
-elseif (strlen( $_POST['employeeID']) > 20 || strlen($_POST['employeeID']) < 4)
+elseif (strlen( $_POST['employeeID']) > 20)
 {
     $message = 'Incorrect Length for employeeID';
 }
 /*** check the password is the correct length ***/
-elseif (strlen( $_POST['password']) > 20 || strlen($_POST['password']) < 4)
+elseif (strlen( $_POST['password']) > 20)
 {
     $message = 'Incorrect Length for Password';
 }
