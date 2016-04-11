@@ -3,15 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="5f1e4ffc-a2f5-4268-bcc9-1d06e4503277" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/activeRes.php" afterPath="$PROJECT_DIR$/php/activeRes.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/addRes.php" afterPath="$PROJECT_DIR$/php/addRes.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/cancelRes.php" afterPath="$PROJECT_DIR$/php/cancelRes.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/cancelResQuery.php" afterPath="$PROJECT_DIR$/php/cancelResQuery.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/checkRes.php" afterPath="$PROJECT_DIR$/php/checkRes.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/deleteRes.php" afterPath="$PROJECT_DIR$/php/deleteRes.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/makeRes.php" afterPath="$PROJECT_DIR$/php/makeRes.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/updateRes.php" afterPath="$PROJECT_DIR$/php/updateRes.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/updateResForm.php" afterPath="$PROJECT_DIR$/php/updateResForm.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/pageNavLoggedIn.php" afterPath="$PROJECT_DIR$/php/pageNavLoggedIn.php" />
     </list>
     <ignored path="flash.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -36,8 +28,8 @@
       <file leaf-file-name="flash.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/css/flash.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="67" column="0" selection-start-line="67" selection-start-column="0" selection-end-line="69" selection-end-column="1" />
+            <state relative-caret-position="180">
+              <caret line="23" column="1" selection-start-line="23" selection-start-column="1" selection-end-line="23" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -46,8 +38,8 @@
       <file leaf-file-name="pageNavLoggedIn.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/php/pageNavLoggedIn.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="19" column="42" selection-start-line="19" selection-start-column="42" selection-end-line="19" selection-end-column="42" />
+            <state relative-caret-position="345">
+              <caret line="23" column="65" selection-start-line="23" selection-start-column="65" selection-end-line="23" selection-end-column="65" />
               <folding>
                 <element signature="e#6#92#0#PHP" expanded="true" />
               </folding>
@@ -362,12 +354,12 @@
       <workItem from="1459290692417" duration="2000" />
       <workItem from="1459290699349" duration="4225000" />
       <workItem from="1459296572315" duration="36146000" />
-      <workItem from="1459882224950" duration="57827000" />
+      <workItem from="1459882224950" duration="58406000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="98200000" />
+    <option name="totallyTimeSpent" value="98779000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="9" y="23" width="1271" height="722" extended-state="0" />
@@ -821,14 +813,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/flash.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="67" column="0" selection-start-line="67" selection-start-column="0" selection-end-line="69" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/php/pageNav.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -839,10 +823,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/css/flash.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="23" column="1" selection-start-line="23" selection-start-column="1" selection-end-line="23" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/php/pageNavLoggedIn.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="42" selection-start-line="19" selection-start-column="42" selection-end-line="19" selection-end-column="42" />
+        <state relative-caret-position="345">
+          <caret line="23" column="65" selection-start-line="23" selection-start-column="65" selection-end-line="23" selection-end-column="65" />
           <folding>
             <element signature="e#6#92#0#PHP" expanded="true" />
           </folding>
