@@ -17,6 +17,8 @@ function outputSuccess(){
 function insertMenu(){
     
     
+    
+    
      try {
         $pdo = getPDO('flash');
 
@@ -25,6 +27,18 @@ function insertMenu(){
         $side1 = $_POST['side1'];
         $side2 = $_POST['side2'];
         $special = $_POST['special'];
+        
+        $sql = "SELECT `menuDate` FROM `menu` WHERE menuDate = '$date'";
+
+        $queryResult = $pdo->query($sql);
+        
+        $row = $queryResult->fetch(PDO::FETCH_ASSOC);
+        
+        if(isset($row['menuDate'])){
+            $sql = "DELETE FROM `menu` WHERE `menu`.`menuDate` = '{$row['menuDate']}';";
+
+            $queryResult = $pdo->query($sql);
+        }
         
 
         $sql = "INSERT INTO `menu` (`menuDate`, `menuEntree`, `menuSide1`, `menuSide2`, `menuSpecial`) VALUES ('$date', '$entree', '$side1', '$side2', '$special')";

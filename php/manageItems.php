@@ -33,7 +33,7 @@ function addItemToDb(){
         $pdo = getPDO('flash');
 
         //echo($_FILES['itemPicture']['error']);
-        
+
         $type = $_POST['type'];
         $name = $_POST['name'];
         $cals = $_POST['cals'];
@@ -44,7 +44,22 @@ function addItemToDb(){
         unset($_POST);
     $_POST = array();
         
+        $sql = "SELECT `itemName` FROM `items` WHERE itemName = '$name'";
 
+        $queryResult = $pdo->query($sql);
+        
+        $row = $queryResult->fetch(PDO::FETCH_ASSOC);
+        
+        if(isset($row['itemName'])){
+            $sql = "DELETE FROM `items` WHERE `items`.`itemName` = '{$row['itemName']}';";
+
+            $queryResult = $pdo->query($sql);
+        }
+    
+    
+    
+    
+    
         $sql = "INSERT INTO `items` (`itemName`, `itemType`, `itemPrice`, `itemCal`, `itemDesc`) VALUES ('$name', '$type', '$price', '$cals', '$desc')";
 
         $queryResult = $pdo->query($sql);
@@ -189,7 +204,7 @@ echo("<div id=\"form\" class=\"center\">
         <label for=\"price\">Item price:</label> <input type=\"number\" name=\"price\" min=\"0\" step=\".01\" value=\"\" required><br><br>
         <label for=\"desc\">Item Description:</label> <textarea rows=\"4\" cols=\"50\" form=\"addItemForm\" name=\"desc\" size=\"500\" value=\"\" required></textarea><br><br>
         <input type=\"hidden\" name=\"MAX_FILE_SIZE\" value=\"3000000\" />
-        <label for=\"itemPicture\">Item Picture:</label> <input type=\"file\" name=\"itemPicture\" id=\"itemPicture\"><br><br>
+        <label for=\"itemPicture\">Item Picture:</label> <input type=\"file\" name=\"itemPicture\" id=\"itemPicture\" required><br><br>
         <input type=\"text\" name=\"type\" value=\"{$_POST['addItem']}\" style=\"display:none;\">
         <input type=\"submit\">
     </form>
