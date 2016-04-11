@@ -2,15 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5f1e4ffc-a2f5-4268-bcc9-1d06e4503277" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/addRes.php" afterPath="$PROJECT_DIR$/php/addRes.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/cancelResQuery.php" afterPath="$PROJECT_DIR$/php/cancelResQuery.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/checkRes.php" afterPath="$PROJECT_DIR$/php/checkRes.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/deleteRes.php" afterPath="$PROJECT_DIR$/php/deleteRes.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/editResQuery.php" afterPath="$PROJECT_DIR$/php/editResQuery.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/pageNav.php" afterPath="$PROJECT_DIR$/php/pageNav.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/pageNavLoggedIn.php" afterPath="$PROJECT_DIR$/php/pageNavLoggedIn.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/updateRes.php" afterPath="$PROJECT_DIR$/php/updateRes.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/updateResForm.php" afterPath="$PROJECT_DIR$/php/updateResForm.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="flash.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -32,11 +24,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="updateResForm.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="updateResForm.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/php/updateResForm.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-292">
-              <caret line="77" column="60" selection-start-line="77" selection-start-column="60" selection-end-line="77" selection-end-column="60" />
+            <state relative-caret-position="1590">
+              <caret line="106" column="9" selection-start-line="106" selection-start-column="9" selection-end-line="106" selection-end-column="9" />
               <folding>
                 <element signature="e#6#91#0#PHP" expanded="true" />
                 <marker date="1460339661000" expanded="true" signature="251:327" placeholder="SELECT `res_... reservations" />
@@ -48,6 +40,65 @@
                 <marker date="1460339661000" expanded="true" signature="2907:2962" placeholder="..." />
                 <marker date="1460339661000" expanded="true" signature="2907:3420" placeholder="..." />
                 <marker date="1460339661000" expanded="true" signature="4030:4040" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="menu.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/php/menu.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-3667">
+              <caret line="127" column="7" selection-start-line="127" selection-start-column="7" selection-end-line="127" selection-end-column="7" />
+              <folding>
+                <element signature="e#6#190#0#PHP" expanded="false" />
+                <marker date="1460345391000" expanded="true" signature="4429:4659" placeholder="..." />
+                <marker date="1460345391000" expanded="true" signature="4801:4898" placeholder="SELECT `menu... menu" />
+                <marker date="1460345391000" expanded="true" signature="5014:5120" placeholder="SELECT `item... items" />
+                <marker date="1460345391000" expanded="true" signature="5250:5355" placeholder="SELECT `item... items" />
+                <marker date="1460345391000" expanded="true" signature="5484:5589" placeholder="SELECT `item... items" />
+                <marker date="1460345391000" expanded="true" signature="5718:5825" placeholder="SELECT `item... items" />
+                <marker date="1460345391000" expanded="true" signature="6012:6109" placeholder="SELECT `menu... menu" />
+                <marker date="1460345391000" expanded="true" signature="6233:6339" placeholder="SELECT `item... items" />
+                <marker date="1460345391000" expanded="true" signature="6469:6574" placeholder="SELECT `item... items" />
+                <marker date="1460345391000" expanded="true" signature="6703:6808" placeholder="SELECT `item... items" />
+                <marker date="1460345391000" expanded="true" signature="6937:7044" placeholder="SELECT `item... items" />
+                <marker date="1460345391000" expanded="true" signature="7216:7313" placeholder="SELECT `menu... menu" />
+                <marker date="1460345391000" expanded="true" signature="7437:7543" placeholder="SELECT `item... items" />
+                <marker date="1460345391000" expanded="true" signature="7673:7778" placeholder="SELECT `item... items" />
+                <marker date="1460345391000" expanded="true" signature="7907:8012" placeholder="SELECT `item... items" />
+                <marker date="1460345391000" expanded="true" signature="8141:8248" placeholder="SELECT `item... items" />
+                <marker date="1460345391000" expanded="true" signature="8419:8516" placeholder="SELECT `menu... menu" />
+                <marker date="1460345391000" expanded="true" signature="8640:8746" placeholder="SELECT `item... items" />
+                <marker date="1460345391000" expanded="true" signature="8876:8981" placeholder="SELECT `item... items" />
+                <marker date="1460345391000" expanded="true" signature="9110:9215" placeholder="SELECT `item... items" />
+                <marker date="1460345391000" expanded="true" signature="9344:9451" placeholder="SELECT `item... items" />
+                <marker date="1460345391000" expanded="true" signature="9620:9717" placeholder="SELECT `menu... menu" />
+                <marker date="1460345391000" expanded="true" signature="9841:9947" placeholder="SELECT `item... items" />
+                <marker date="1460345391000" expanded="true" signature="10077:10182" placeholder="SELECT `item... items" />
+                <marker date="1460345391000" expanded="true" signature="10311:10416" placeholder="SELECT `item... items" />
+                <marker date="1460345391000" expanded="true" signature="10545:10652" placeholder="SELECT `item... items" />
+                <marker date="1460345391000" expanded="true" signature="10832:11118" placeholder="..." />
+                <marker date="1460345391000" expanded="true" signature="11127:12077" placeholder="..." />
+                <marker date="1460345391000" expanded="true" signature="12086:12357" placeholder="..." />
+                <marker date="1460345391000" expanded="true" signature="12366:13301" placeholder="..." />
+                <marker date="1460345391000" expanded="true" signature="13310:14245" placeholder="..." />
+                <marker date="1460345391000" expanded="true" signature="14254:14550" placeholder="..." />
+                <marker date="1460345391000" expanded="true" signature="14559:15529" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="createMenu.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/php/createMenu.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding>
+                <marker date="1460349361000" expanded="true" signature="256:274" placeholder="..." />
+                <marker date="1460349361000" expanded="true" signature="606:752" placeholder="INSERT INTO `menu`... " />
+                <marker date="1460349361000" expanded="true" signature="953:1032" placeholder="SELECT `item... items" />
               </folding>
             </state>
           </provider>
@@ -289,16 +340,16 @@
       <workItem from="1459290692417" duration="2000" />
       <workItem from="1459290699349" duration="4225000" />
       <workItem from="1459296572315" duration="36146000" />
-      <workItem from="1459882224950" duration="59449000" />
+      <workItem from="1459882224950" duration="60283000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="99822000" />
+    <option name="totallyTimeSpent" value="100656000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="9" y="23" width="1271" height="722" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17331164" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -525,18 +576,18 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1460259491000" expanded="true" signature="609:688" placeholder="SELECT `item... items" />
-            <marker date="1460259491000" expanded="true" signature="949:1307" placeholder="..." />
-            <marker date="1460259491000" expanded="true" signature="1814:1905" placeholder="SELECT `item... items" />
-            <marker date="1460259491000" expanded="true" signature="2139:2348" placeholder="..." />
-            <marker date="1460259491000" expanded="true" signature="3189:3650" placeholder="..." />
-            <marker date="1460259491000" expanded="true" signature="3302:3633" placeholder="..." />
-            <marker date="1460259491000" expanded="true" signature="3747:4749" placeholder="..." />
-            <marker date="1460259491000" expanded="true" signature="3861:4192" placeholder="..." />
-            <marker date="1460259491000" expanded="true" signature="4251:4749" placeholder="..." />
-            <marker date="1460259491000" expanded="true" signature="4296:4749" placeholder="..." />
-            <marker date="1460259491000" expanded="true" signature="4331:4525" placeholder="..." />
-            <marker date="1460259491000" expanded="true" signature="4554:4720" placeholder="..." />
+            <marker date="1460340671000" expanded="true" signature="609:688" placeholder="SELECT `item... items" />
+            <marker date="1460340671000" expanded="true" signature="949:1269" placeholder="..." />
+            <marker date="1460340671000" expanded="true" signature="1776:1867" placeholder="SELECT `item... items" />
+            <marker date="1460340671000" expanded="true" signature="2101:2310" placeholder="..." />
+            <marker date="1460340671000" expanded="true" signature="3151:3612" placeholder="..." />
+            <marker date="1460340671000" expanded="true" signature="3264:3595" placeholder="..." />
+            <marker date="1460340671000" expanded="true" signature="3709:4711" placeholder="..." />
+            <marker date="1460340671000" expanded="true" signature="3823:4154" placeholder="..." />
+            <marker date="1460340671000" expanded="true" signature="4213:4711" placeholder="..." />
+            <marker date="1460340671000" expanded="true" signature="4258:4711" placeholder="..." />
+            <marker date="1460340671000" expanded="true" signature="4293:4487" placeholder="..." />
+            <marker date="1460340671000" expanded="true" signature="4516:4682" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -547,16 +598,6 @@
           <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
           <folding>
             <element signature="n#!!doc;n#dropDownList#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/php/menu.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="572">
-          <caret line="127" column="7" selection-start-line="127" selection-start-column="7" selection-end-line="127" selection-end-column="7" />
-          <folding>
-            <element signature="e#6#190#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -748,8 +789,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/php/updateResForm.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-292">
-          <caret line="77" column="60" selection-start-line="77" selection-start-column="60" selection-end-line="77" selection-end-column="60" />
+        <state relative-caret-position="1590">
+          <caret line="106" column="9" selection-start-line="106" selection-start-column="9" selection-end-line="106" selection-end-column="9" />
           <folding>
             <element signature="e#6#91#0#PHP" expanded="true" />
             <marker date="1460339661000" expanded="true" signature="251:327" placeholder="SELECT `res_... reservations" />
@@ -761,6 +802,61 @@
             <marker date="1460339661000" expanded="true" signature="2907:2962" placeholder="..." />
             <marker date="1460339661000" expanded="true" signature="2907:3420" placeholder="..." />
             <marker date="1460339661000" expanded="true" signature="4030:4040" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/php/menu.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3667">
+          <caret line="127" column="7" selection-start-line="127" selection-start-column="7" selection-end-line="127" selection-end-column="7" />
+          <folding>
+            <element signature="e#6#190#0#PHP" expanded="false" />
+            <marker date="1460345391000" expanded="true" signature="4429:4659" placeholder="..." />
+            <marker date="1460345391000" expanded="true" signature="4801:4898" placeholder="SELECT `menu... menu" />
+            <marker date="1460345391000" expanded="true" signature="5014:5120" placeholder="SELECT `item... items" />
+            <marker date="1460345391000" expanded="true" signature="5250:5355" placeholder="SELECT `item... items" />
+            <marker date="1460345391000" expanded="true" signature="5484:5589" placeholder="SELECT `item... items" />
+            <marker date="1460345391000" expanded="true" signature="5718:5825" placeholder="SELECT `item... items" />
+            <marker date="1460345391000" expanded="true" signature="6012:6109" placeholder="SELECT `menu... menu" />
+            <marker date="1460345391000" expanded="true" signature="6233:6339" placeholder="SELECT `item... items" />
+            <marker date="1460345391000" expanded="true" signature="6469:6574" placeholder="SELECT `item... items" />
+            <marker date="1460345391000" expanded="true" signature="6703:6808" placeholder="SELECT `item... items" />
+            <marker date="1460345391000" expanded="true" signature="6937:7044" placeholder="SELECT `item... items" />
+            <marker date="1460345391000" expanded="true" signature="7216:7313" placeholder="SELECT `menu... menu" />
+            <marker date="1460345391000" expanded="true" signature="7437:7543" placeholder="SELECT `item... items" />
+            <marker date="1460345391000" expanded="true" signature="7673:7778" placeholder="SELECT `item... items" />
+            <marker date="1460345391000" expanded="true" signature="7907:8012" placeholder="SELECT `item... items" />
+            <marker date="1460345391000" expanded="true" signature="8141:8248" placeholder="SELECT `item... items" />
+            <marker date="1460345391000" expanded="true" signature="8419:8516" placeholder="SELECT `menu... menu" />
+            <marker date="1460345391000" expanded="true" signature="8640:8746" placeholder="SELECT `item... items" />
+            <marker date="1460345391000" expanded="true" signature="8876:8981" placeholder="SELECT `item... items" />
+            <marker date="1460345391000" expanded="true" signature="9110:9215" placeholder="SELECT `item... items" />
+            <marker date="1460345391000" expanded="true" signature="9344:9451" placeholder="SELECT `item... items" />
+            <marker date="1460345391000" expanded="true" signature="9620:9717" placeholder="SELECT `menu... menu" />
+            <marker date="1460345391000" expanded="true" signature="9841:9947" placeholder="SELECT `item... items" />
+            <marker date="1460345391000" expanded="true" signature="10077:10182" placeholder="SELECT `item... items" />
+            <marker date="1460345391000" expanded="true" signature="10311:10416" placeholder="SELECT `item... items" />
+            <marker date="1460345391000" expanded="true" signature="10545:10652" placeholder="SELECT `item... items" />
+            <marker date="1460345391000" expanded="true" signature="10832:11118" placeholder="..." />
+            <marker date="1460345391000" expanded="true" signature="11127:12077" placeholder="..." />
+            <marker date="1460345391000" expanded="true" signature="12086:12357" placeholder="..." />
+            <marker date="1460345391000" expanded="true" signature="12366:13301" placeholder="..." />
+            <marker date="1460345391000" expanded="true" signature="13310:14245" placeholder="..." />
+            <marker date="1460345391000" expanded="true" signature="14254:14550" placeholder="..." />
+            <marker date="1460345391000" expanded="true" signature="14559:15529" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/php/createMenu.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1460349361000" expanded="true" signature="256:274" placeholder="..." />
+            <marker date="1460349361000" expanded="true" signature="606:752" placeholder="INSERT INTO `menu`... " />
+            <marker date="1460349361000" expanded="true" signature="953:1032" placeholder="SELECT `item... items" />
           </folding>
         </state>
       </provider>
