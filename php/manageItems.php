@@ -19,6 +19,7 @@ if (isset($_GET['item'])) {
     displayTable();
 } elseif(isset($_POST['name'])){ 
     addItemToDb();
+    displayButtons();
 }elseif(isset($_POST['addItem'])){
     //echo($_POST['addItem']);
     addItemForm();
@@ -167,11 +168,11 @@ function addItemForm(){
 echo("<div id=\"form\" class=\"center\">
     
     <h1>Add an item to the database:</h1>
-    <form method=\"post\" action=\"manageItems.php\">
-        <label for=\"name\">Item name:</label> <input type=\"text\" name=\"name\" size=\"50\" value=\"\"><br><br>
-        <label for=\"cals\">Item calories:</label> <input type=\"number\" name=\"cals\" min=\"0\" step=\"1\" value=\"\"><br><br>
-        <label for=\"price\">Item price:</label> <input type=\"number\" name=\"price\" min=\"0\" step=\".01\" value=\"\"><br><br>
-        <label for=\"desc\">Item Description:</label> <textarea rows=\"4\" cols=\"50\" name=\"desc\" size=\"500\" value=\"\"></textarea><br><br>
+    <form method=\"post\" action=\"manageItems.php\" id=\"addItemForm\">
+        <label for=\"name\">Item name:</label> <input type=\"text\" name=\"name\" size=\"50\" value=\"\" required><br><br>
+        <label for=\"cals\">Item calories:</label> <input type=\"number\" name=\"cals\" min=\"0\" step=\"1\" value=\"\" required><br><br>
+        <label for=\"price\">Item price:</label> <input type=\"number\" name=\"price\" min=\"0\" step=\".01\" value=\"\" required><br><br>
+        <label for=\"desc\">Item Description:</label> <textarea rows=\"4\" cols=\"50\" form=\"addItemForm\" name=\"desc\" size=\"500\" value=\"\" required></textarea><br><br>
         <input type=\"text\" name=\"type\" value=\"{$_POST['addItem']}\" style=\"display:none;\">
         <input type=\"submit\">
     </form>
@@ -200,14 +201,10 @@ function displayTable() {
     // output item select page
     echo("<div id=\"itemSelect\">
 
-                <h1>Select Which items to view:</h1>
-                <form action=\"items.php\" method=\"post\">
-                    <button type=\"submit\" name=\"typeSelect\" value=\"entree\">View Entrees</button>
-                    <button type=\"submit\" name=\"typeSelect\" value=\"special\">View Specials</button>
-                    <button type=\"submit\" name=\"typeSelect\" value=\"side\">View Sides</button>
-                </form>
+                ");
+    displayButtons();
                 
-                <div id=\"itemTableDiv\">
+              echo("  <div id=\"itemTableDiv\">
                     <table id=\"itemTable\">
                         <colgroup>
                             <col id=\"nameColumn\">
