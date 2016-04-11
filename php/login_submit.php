@@ -64,8 +64,7 @@ else
                     AND password = :password");
 
         /*** bind the parameters ***/
-        $stmt->bindParam(':employeeID
-       ', $employeeID, PDO::PARAM_STR);
+        $stmt->bindParam(':employeeID', $employeeID, PDO::PARAM_STR);
         $stmt->bindParam(':password', $password, PDO::PARAM_STR, 40);
 
         /*** execute the prepared statement ***/
