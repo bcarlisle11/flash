@@ -34,6 +34,8 @@
             } else {
                 edit();
             }
+        } else{
+            add();
         }
 
         function add() {
