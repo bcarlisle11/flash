@@ -1,32 +1,26 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: bcarlisle11
- * Date: 4/9/16
- * Time: 4:39 PM
- */
 echo "<script type='text/javascript' src='../script/reservations.js'></script>";
 try {
     $pdo = getPDO('flash');
 
-    $res_id = $_POST['res_id'];
-    $time = $_POST['time'];
-    $day = $_POST['day'];
-    $diners = $_POST['diner'];
+    $res_id = $_POST['editDrop'];
+    $time = $_POST['timeof'];
+    $day = $_POST['dayof'];
+    $diners = $_POST['diners'];
 
-    $sql = "UPDATE `reservations` 
-            SET `diners` = '$diners', `dayof` = '$day', `timeof` = '$time'
-            WHERE `res_id` = $res_id";
+    echo $res_id;
+
+    $sql = "DELETE
+            FROM `reservations`
+            WHERE res_id = $res_id";
 
     $pdo->exec($sql);
     $pdo = null;
 
-    $queryData = "You have successfully reserved a table on $day at $time for $diners diners!
-                      The reservation id is $res_id.  Please note this for your records.";
-
+    $queryData = "You have successfully canceled your reservation with reservation id: $res_id.";
 
 } catch (PDOException $e){
-    $queryData = "Edit unsuccessful.  Please try again.";
+    $queryData = "Cancel unsuccessful.  Please try again.";
 }
 
 function getPDO($dbname)
@@ -68,4 +62,3 @@ function getPDO($dbname)
     </div>
 </body>
 </html>
-

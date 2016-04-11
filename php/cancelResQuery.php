@@ -1,5 +1,11 @@
 <?php
-echo "<script type='text/javascript' src='../script/reservations.js'></script>";
+/**
+ * Created by PhpStorm.
+ * User: bcarlisle11
+ * Date: 4/10/16
+ * Time: 7:30 PM
+ */
+
 try {
     $pdo = getPDO('flash');
     $id = $_POST['id'];
@@ -30,13 +36,11 @@ function getPDO($dbname)
 }
 ?>
 
-
-
 <!DOCTYPE html>
 <html>
 <head lang="en">
     <meta charset="UTF-8">
-    <title>Edit Reservation</title>
+    <title>Cancel Reservation</title>
     <link rel="stylesheet" href="../css/flash.css">
 </head>
 <body>
@@ -44,15 +48,15 @@ function getPDO($dbname)
     <?php
     include_once"pageNav.php"
     ?>
-    <div method="post" id="res_section">
+    <div id="res_section">
         <div id="form" class="center">
             Active Reservations for employee id: <?php echo $id?><br><br>
-            Please choose the reservation id of the reservation you would like to edit:<br><br>
-            <form method ='post' action="updateResForm.php">
+            Please choose the reservation id of the reservation you would like to cancel:<br><br>
+            <form method ='post' action="deleteRes.php">
                 Reservation ID:
                 <?php echo $queryData?>
                 <br><br>
-                <input id='edit' name ='edit' type ='submit' value='Edit'>
+                <input id='submit' name ='submit' type ='submit' value='Submit'>
             </form>
         </div>
     </div>
@@ -61,5 +65,3 @@ function getPDO($dbname)
     </div>
 </body>
 </html>
-
-        

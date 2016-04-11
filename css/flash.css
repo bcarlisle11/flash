@@ -32,12 +32,12 @@ img {
 #form {
     text-align:center;
     font-weight: bold;
-    padding: 6px;
+    padding: 1%;
     background-color: darkred;
     width: 60%;
     height: 47.5%;
     border-radius: 25px;
-    text-decoration-color: aliceblue; ;
+    text-decoration-color: aliceblue;
 }
 
 
@@ -154,6 +154,7 @@ label{
     float: left;
     text-align: right;
 }
+
 input {
     display: inline-block;
     float: right;
@@ -222,7 +223,6 @@ input, #editRes {
 }
 
 #itemTableDiv {
-
     overflow: auto;
     margin: auto;
     width:40%;
@@ -242,10 +242,4 @@ input, #editRes {
 
 td.listItem:hover{
     background-color: gray;
-}
-
-#checkRes {
-    border: 1px solid dimgrey;
-    text-align: center;
-    font-size: medium;
 }

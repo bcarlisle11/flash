@@ -20,6 +20,7 @@ echo "<script type='text/javascript' src='../script/reservations.js'></script>";
             <a href="reservations.php">Reservations Home</a>
             <a href="makeRes.php">Make Reservation</a>
             <a href="editRes.php">Edit Reservation</a>
+            <a href="cancelRes.php">Cancel Reservation</a>
             <a href="activeRes.php">Check Active Reservations</a>
         </div>
     </li>

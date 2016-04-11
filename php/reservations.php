@@ -22,6 +22,7 @@ echo "<script type='text/javascript' src='../script/reservations.js'></script>";
         <br><br>
         <a href ="makeRes.php"><button type="button">Make A Reservation</button></a><br><br>
         <a href="editRes.php"><button type="button">Edit A Reservation</button></a><br><br>
+        <a href="cancelRes.php"><button type="button">Cancel A Reservation</button></a><br><br>
         <a href="activeRes.php"><button type="button">Check Active Reservations</button></a><br><br>
     </div>
     </div>

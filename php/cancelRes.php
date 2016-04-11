@@ -1,8 +1,12 @@
 <?php
+/**
+ * Created by PhpStorm.
+ * User: bcarlisle11
+ * Date: 4/10/16
+ * Time: 7:28 PM
+ */
 echo "<script type='text/javascript' src='../script/reservations.js'></script>";
 ?>
-
-
 
 <!DOCTYPE html>
 <html>
@@ -18,10 +22,10 @@ echo "<script type='text/javascript' src='../script/reservations.js'></script>";
     ?>
     <div id="res_section">
         <div id="form" class="center">
-            Please insert the id you would like to edit a reservation for:<br><br>
-            <form method ="post" action="editResQuery.php">
-                <label for="id">Employee ID: </label><input type="text" name="id" value=""><br><br>
-                <input id="submit" name ="submit" type ="submit">
+            Please insert the id you would like to cancel a reservation for:<br><br>
+            <form method ="post" action="cancelResQuery.php">
+                <label for=id">Employee ID: </label><input type="text" name="id" value=""><br><br>
+                <input id="submit" name ="cancel" type ="submit" value="Submit">
             </form>
         </div>
     </div>
