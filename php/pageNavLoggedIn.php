@@ -4,6 +4,7 @@
  * User: bcarlisle11
  * Date: 4/3/16
  * Time: 10:05 PM
+ * This will be used as the nav bar on the page whenever a manager is logged in
  */
 echo "<script type='text/javascript' src='../script/reservations.js'></script>";
 ?>

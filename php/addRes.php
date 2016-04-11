@@ -8,26 +8,32 @@
 echo "<script type='text/javascript' src='../script/reservations.js'></script>";
 
     try {
+        //connect to db using pdo
         $pdo = getPDO('flash');
 
+        //get the input values
         $id = $_POST['id'];
         $time = $_POST['time'];
         $day = $_POST['day'];
         $diners = $_POST['diner'];
         $res_id = rand(1,500);
 
+        //sql to query
         $sql = "SELECT `id` FROM employee WHERE id = $id";
 
+        //run the query
         $queryResult = $pdo->query($sql);
 
-
+        //if the id exists do this
         if($row = $queryResult->fetch(PDO::FETCH_ASSOC)){
 
+            //sql to execute
             $sql = "INSERT INTO reservations
                     (id,res_id,diners,dayof,timeof)
                     VALUES
                     ('$id','$res_id','$diners','$day','$time')";
 
+            //execute sql
             $pdo->exec($sql);
             $pdo = null;
 
@@ -39,8 +45,7 @@ echo "<script type='text/javascript' src='../script/reservations.js'></script>";
         }
 
     } catch (PDOException $e) {
-        echo "<script type='text/javascript'>alert('You must specify a value for all fields')";
-        //echo($e->getMessage());
+        $queryResult = "An error has occurred.  Please try again.";
     }
 
     function getPDO($dbname)
@@ -54,7 +59,7 @@ echo "<script type='text/javascript' src='../script/reservations.js'></script>";
             return $pdo;
 
         } catch (PDOException $e) {
-            //$GLOBALS['ConfirmationMessage'] = $e->getMessage();
+            
         }
     }
 ?>

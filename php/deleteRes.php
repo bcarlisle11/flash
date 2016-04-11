@@ -1,19 +1,22 @@
 <?php
 echo "<script type='text/javascript' src='../script/reservations.js'></script>";
+
 try {
+    //connect to db with pdo
     $pdo = getPDO('flash');
 
+    //get values
     $res_id = $_POST['editDrop'];
     $time = $_POST['timeof'];
     $day = $_POST['dayof'];
     $diners = $_POST['diners'];
 
-    echo $res_id;
-
+    //sql query to run
     $sql = "DELETE
             FROM `reservations`
             WHERE res_id = $res_id";
 
+    //execute the sql
     $pdo->exec($sql);
     $pdo = null;
 

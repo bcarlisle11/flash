@@ -7,17 +7,21 @@
  */
 echo "<script type='text/javascript' src='../script/reservations.js'></script>";
 try {
+    //connects to the db using pdo
     $pdo = getPDO('flash');
-
+    
+    //get values
     $res_id = $_POST['res_id'];
     $time = $_POST['time'];
     $day = $_POST['day'];
     $diners = $_POST['diner'];
-
+    
+    //sql to execute
     $sql = "UPDATE `reservations` 
             SET `diners` = '$diners', `dayof` = '$day', `timeof` = '$time'
             WHERE `res_id` = $res_id";
-
+    
+    //execute sql
     $pdo->exec($sql);
     $pdo = null;
 

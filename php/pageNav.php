@@ -4,6 +4,7 @@
  * User: bcarlisle11
  * Date: 4/3/16
  * Time: 10:05 PM
+ * This page is to be used as the page nav for non-logged in pages
  */
 echo "<script type='text/javascript' src='../script/reservations.js'></script>";
 ?>

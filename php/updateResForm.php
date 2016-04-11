@@ -7,15 +7,20 @@
  */
 
 try {
+    //connect to db using pdo
     $pdo = getPDO('flash');
 
+    //get the res_id value
     $res_id = $_POST['editDrop'];
 
+    //query to run
     $sql = "SELECT `id`, `diners`, `dayof`, `timeof` FROM `reservations` WHERE res_id = $res_id";
 
+    //run query
     $queryResult = $pdo->query($sql);
 
     while ($row = $queryResult->fetch(PDO::FETCH_ASSOC) ) {
+        //build the form
         $queryData = "
                 <label for='id'>Employee ID: </label><input type='text' name='id' value='{$row['id']}' readonly><br><br>
                 <label for='res_id'>Reservation ID:</label><input type='text' name='res_id' value='$res_id' readonly><br><br>
@@ -70,7 +75,7 @@ try {
 
     
 } catch(PDOException $e){
-
+    $queryData = "An error has occured.  Please Try again.";
 }
 
 function getPDO($dbname)

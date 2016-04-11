@@ -1,23 +1,39 @@
 <?php
 echo "<script type='text/javascript' src='../script/reservations.js'></script>";
 try {
+    //connect to the db with the pdo
     $pdo = getPDO('flash');
+
+    //set id = to the input id
     $id = $_POST['id'];
+
+    //the sql to query
     $sql = "SELECT `id`, `res_id`, `diners`, `dayof`, `timeof` FROM `reservations` WHERE id = $id";
+
+    //run the query
     $queryResult = $pdo->query($sql);
+
+    //begin the drop list
     $queryData = '<select id="editDrop" name="editDrop">';
+
+    //add the values to the drop list while values still exist
     while ( $row = $queryResult->fetch(PDO::FETCH_ASSOC) ) {
         $queryData .= '<option value="' . $row['res_id'] . '">' . $row['res_id'] . '</option>';
     }
+
+    //close drop list
     $queryData .='</select>';
+
+    //get the res_id value out of the drop list
     if($_POST['submit'] && $_POST['submit'] != 0)
     {
         $res_id=$_POST['editDrop'];
     }
 
 } catch (PDOException $e) {
-
+    $queryData = "An error has occurred. Please try again.";
 }
+
 function getPDO($dbname)
 {
     include('../db/flashDB.php');

@@ -7,15 +7,30 @@
  */
 
 try {
+    //connect to db with pdo
     $pdo = getPDO('flash');
+
+    //get the input values
     $id = $_POST['id'];
+
+    //query to run
     $sql = "SELECT `id`, `res_id`, `diners`, `dayof`, `timeof` FROM `reservations` WHERE id = $id";
+
+    //run the query
     $queryResult = $pdo->query($sql);
+
+    //begin drop list
     $queryData = '<select id="editDrop" name="editDrop">';
+
     while ( $row = $queryResult->fetch(PDO::FETCH_ASSOC) ) {
+        //add the drop list values
         $queryData .= '<option value="' . $row['res_id'] . '">' . $row['res_id'] . '</option>';
     }
+
+    //close the drop list
     $queryData .='</select>';
+
+    //get the res_id chosen value out of drop list
     if($_POST['submit'] && $_POST['submit'] != 0)
     {
         $res_id=$_POST['editDrop'];
