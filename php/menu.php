@@ -98,7 +98,14 @@ function getDateOfDay($day, $full) {
         }
     }
 
-
+if(isset($_POST['week'])){
+        $next = $_POST['week'];
+        //echo($_POST['week'] + "<br>");
+    } else {
+        $next = 0;
+    }
+    
+    $modifier += $next * 7;
 
 
     if($full){
@@ -371,11 +378,25 @@ function getPDO($dbname) {
     <body>
         <main id="menu">
 
-
-            <div id="section">
-                <button>Previous Week</button>
-                <button>Select Week</button>
-                <button>Next Week</button>
+                <?php
+            
+            if(isset($_POST['week'])){
+                $nextWeekValue = $_POST['week'] + 1;
+                $prevWeekValue = $_POST['week'] - 1;
+            } else{
+                $nextWeekValue = 1;
+                $prevWeekValue = -1;
+            }
+            
+            
+            echo("<div id=\"section\">
+                <form action=\"menu.php\" method=\"post\">
+                    Select Week:
+                    <button type=\"submit\" name=\"week\" value=\"{$prevWeekValue}\">Previous Week</button>
+                    <button type=\"submit\" name=\"week\" value=\"{$nextWeekValue}\">Next Week</button>
+                </form>");
+            
+?>
 
 
                 <table id="menu" align="center">
