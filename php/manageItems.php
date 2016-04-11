@@ -6,7 +6,7 @@
  * and open the template in the editor.
  */
 
-include_once 'pageNav.php'; // change to manager facing pageNav
+include_once 'pageNavLoggedIn.php'; // change to manager facing pageNav
 $item = "";
 
 $name;
@@ -110,9 +110,11 @@ function populateTableVars() {
     }
 }
 
+// "alias"
 function outputRows() {
 
-    populateTableVars();
+    populateTableVars(); // probably not best practice.....
+  
 //    
 //    for($i = 0; $i <= count($name); $i++){
 //        echo("

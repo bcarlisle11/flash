@@ -11,7 +11,7 @@
     <body>
 
         <?php
-        include_once 'pageNav.php';
+        include_once 'pageNavLoggedIn.php';
 
 
         if (isset($_POST['date'])) {
