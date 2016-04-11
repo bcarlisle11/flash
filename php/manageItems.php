@@ -8,14 +8,14 @@
 
 //check if user is logged in
 session_start();
-if(isset($_SESSION['user_id']))
-{
-    //if no, show login option
-    include_once"pageNav.php";
-}else {
+//if(isset($_SESSION['user_id']))
+//{
+//    //if no, show login option
+//    include_once"pageNav.php";
+//}else {
     //if yes, show logout option
     include_once "pageNavLoggedIn.php";
-}; // change to manager facing pageNav
+//}; // change to manager facing pageNav
 $item = "";
 
 $name;

@@ -30,5 +30,5 @@ echo "<script type='text/javascript' src='../script/reservations.js'></script>";
             <a href="activeRes.php">Check Active Reservations</a>
         </div>
     </li>
-    <li><a href="login.php"><Login</a></li>
+    <li><a href="login.php">Login</a></li>
 </ul>
