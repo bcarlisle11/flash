@@ -26,5 +26,5 @@ echo "<script type='text/javascript' src='../script/reservations.js'></script>";
             <a href="activeRes.php">Check Active Reservations</a>
         </div>
     </li>
-    <li><a href="login.html">Logout</a></li>
+    <li><a href="logout.php">Logout</a></li>
 </ul>
