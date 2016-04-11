@@ -94,7 +94,7 @@ function getPDO($dbname)
 <html>
 <head lang="en">
     <meta charset="UTF-8">
-    <title>Reservations</title>
+    <title>Edit Reservation</title>
     <link rel="stylesheet" href="../css/flash.css">
 </head>
 <body>

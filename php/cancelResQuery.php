@@ -56,7 +56,7 @@ function getPDO($dbname)
                 Reservation ID:
                 <?php echo $queryData?>
                 <br><br>
-                <input id='submit' name ='submit' type ='submit' value='Submit'>
+                <input id='submit' name ='submit' type ='submit'>
             </form>
         </div>
     </div>

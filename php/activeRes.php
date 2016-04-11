@@ -8,7 +8,7 @@ echo "<script type='text/javascript' src='../script/reservations.js'></script>";
     <html>
     <head lang="en">
         <meta charset="UTF-8">
-        <title>Reservations</title>
+        <title>Active Reservations</title>
         <link rel="stylesheet" href="../css/flash.css">
     </head>
     <body>
