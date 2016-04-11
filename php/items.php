@@ -41,8 +41,8 @@ function populateTableVars() {
             echo("
                       <tr>
                         <td class=\"listItem\" onclick=\"itemSelect(this);\">{$row['itemName']}</td>
-                        <td class=\"listItem\" onclick=\"itemSelect(this);\">\${$priceFormatted}</td>
-                        <td class=\"listItem\" onclick=\"itemSelect(this);\">{$row['itemCal']}</td>
+                        <td onclick=\"itemSelect(this);\">\${$priceFormatted}</td>
+                        <td onclick=\"itemSelect(this);\">{$row['itemCal']}</td>
                       
                           </tr>
                       
