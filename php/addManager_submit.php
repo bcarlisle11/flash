@@ -102,7 +102,7 @@ else
     <img class ="top-right" src="../flash.jpg" alt="flash" style="width:304px;height:228px;">
 </div>
 
-<div id="section"><?php echo $message; ?>
+<div id="res_section"><?php echo $message; ?>
     <br>
     <a href="login.php"><button type="button">OK</button></a>
 </div>
