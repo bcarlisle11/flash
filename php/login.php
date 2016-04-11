@@ -34,7 +34,7 @@
 	<div id="form" class="center">
 	<form action="login_submit.php" method="post">
 		Employee ID: <input type="text" id="employeeID" name="employeeID" value="" maxlength="20" /><br>
-		Password: <input type="text" id="phpro_password" name="phpro_password" value="" maxlength="20" /><br><br>
+		Password: <input type="text" id="password" name="password" value="" maxlength="20" /><br><br>
 		<button type="submit">Login</button>
 		<button formaction="addManager.php">Add new manager</button>
 	</form>
