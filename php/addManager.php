@@ -27,7 +27,16 @@ $_SESSION['form_token'] = $form_token;
 
 <body>
 
-<?php include_once"pageNav.php"?>
+<?php
+//check if user is logged in
+session_start();
+if(isset($_SESSION['user_id']))
+{
+    include_once"pageNav.php";
+}else {
+    include_once "pageNavLoggedIn.php";
+}
+?>
 <!--<div id="header">
     <h1>Flash Food Court</h1>
     <img class ="top-right" src="../flash.jpg" alt="flash" style="width:304px;height:228px;">

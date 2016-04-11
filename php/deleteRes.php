@@ -51,7 +51,16 @@ function getPDO($dbname)
 <body>
 <main id="reservation_home">
     <?php
-    include_once"pageNav.php"
+    //check if user is logged in
+    session_start();
+    if(isset($_SESSION['user_id']))
+    {
+        //if no, show login option
+        include_once"pageNav.php";
+    }else {
+        //if yes, show logout option
+        include_once "pageNavLoggedIn.php";
+    }
     ?>
     <div id="res_section">
         <?php

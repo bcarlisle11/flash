@@ -1,5 +1,9 @@
 <?php
 echo "<script type='text/javascript' src='../script/reservations.js'></script>";
+
+
+
+
 ?>
 
 
@@ -14,7 +18,16 @@ echo "<script type='text/javascript' src='../script/reservations.js'></script>";
     <body>
     <main id="reservation_home">
 <?php
-include_once"pageNav.php"
+
+//check if user is logged in
+session_start();
+if(isset($_SESSION['user_id']))
+{
+    include_once"pageNav.php";
+}else {
+    include_once "pageNavLoggedIn.php";
+}
+
 ?>
         <div method="post" id="res_section">
             <div id="form" class="center">

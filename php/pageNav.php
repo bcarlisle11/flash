@@ -10,13 +10,6 @@
 //start session
 session_start();
 
-if(isset($_SESSION['user_id']))
-{
-    $msg = 'Logout';
-}
-else {
-    $msg = 'Login';
-}
 
 echo "<script type='text/javascript' src='../script/reservations.js'></script>";
 ?>
@@ -37,5 +30,5 @@ echo "<script type='text/javascript' src='../script/reservations.js'></script>";
             <a href="activeRes.php">Check Active Reservations</a>
         </div>
     </li>
-    <li><a href="login.php"><?php echo $msg; ?></a></li>
+    <li><a href="login.php"><Login</a></li>
 </ul>
