@@ -223,10 +223,10 @@ input, #editRes {
 }
 
 #itemTableDiv {
-    overflow: auto;
+    overflow-y: scroll;
     margin: auto;
     width:40%;
-    height: 80%;
+    height: 70%;
 }
 
 #itemTable{
