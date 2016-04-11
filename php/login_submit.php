@@ -58,8 +58,8 @@ else
         $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
         /*** prepare the select statement ***/
-        $stmt = $dbh->prepare("SELECT employeeID, password FROM users 
-                    WHERE employeeID
+        $stmt = $dbh->prepare("SELECT id, password FROM manager 
+                    WHERE id
                     = :employeeID
                     AND password = :password");
 
@@ -109,15 +109,19 @@ else
     </head>
 
     <body>
+    <?php include_once"pageNav.php"?>
 
-    <div id="header">
+<!--    <div id="header">
         <h1>Flash Food Court</h1>
         <img class ="top-right" src="../flash.jpg" alt="flash" style="width:304px;height:228px;">
+    </div>-->
+    <div id="res_section">
+        <div id="form" class ="center">
+            <form>
+                <p><?php echo $message; ?></p>
+                <a href="login.php"><button type="button">OK</button></a>
+            </form>
     </div>
-
-    <div id="section" align="center">
-       <p><?php echo $message; ?></p>
-       <button formaction="menu.php">OK</button>
     </div>
 
     <div id="footer">

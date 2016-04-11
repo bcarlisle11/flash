@@ -41,10 +41,10 @@ else
     $mysql_hostname = 'localhost';
 
     /*** mysql employeeID ***/
-    $mysql_employeeID = 'mysql_employeeID';
+    $mysql_employeeID = 'root';
 
     /*** mysql password ***/
-    $mysql_password = 'mysql_password';
+    $mysql_password = 'root';
 
     /*** database name ***/
     $mysql_dbname = 'flash';
@@ -58,7 +58,7 @@ else
         $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
         /*** prepare the insert ***/
-        $stmt = $dbh->prepare("INSERT INTO users (employeeID, password ) VALUES (:employeeID, :password )");
+        $stmt = $dbh->prepare("INSERT INTO manager (id, password ) VALUES (:employeeID, :password )");
 
         /*** bind the parameters ***/
         $stmt->bindParam(':employeeID', $employeeID, PDO::PARAM_STR);
@@ -83,7 +83,7 @@ else
         else
         {
             /*** if we are here, something has gone wrong with the database ***/
-            $message = 'We are unable to process your request. Please try again later"';
+            $message = 'We are unable to process your request. Please try again later';
         }
     }
 }
@@ -102,7 +102,10 @@ else
     <img class ="top-right" src="../flash.jpg" alt="flash" style="width:304px;height:228px;">
 </div>
 
-<div id="section"><?php echo $message; ?></div>
+<div id="section"><?php echo $message; ?>
+    <br>
+    <a href="login.php"><button type="button">OK</button></a>
+</div>
 
 <div id="footer">
     Team Flash

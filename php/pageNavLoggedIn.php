@@ -8,6 +8,7 @@
  */
 echo "<script type='text/javascript' src='../script/reservations.js'></script>";
 ?>
+
 <header id="header">
     <h1>Flash Food Court</h1>
     <img class ="top-right" src="../flash.jpg" alt="flash" style="...">
@@ -26,5 +27,4 @@ echo "<script type='text/javascript' src='../script/reservations.js'></script>";
         </div>
     </li>
     <li><a href="login.html">Logout</a></li>
-    <li><a href="about.html">Hours and Contact Info</a></li>
 </ul>
