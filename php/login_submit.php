@@ -15,7 +15,7 @@ if(isset( $_SESSION['user_id'] ))
     $message = 'Users is already logged in';
 }
 /*** check that both the username, password have been submitted ***/
-if(!isset($_POST['employeeID'], $_POST['password']))
+if(!isset($_POST['employeeID'])||!isset( $_POST['password']))
 {
     $message = 'Please enter a valid username and password';
 }

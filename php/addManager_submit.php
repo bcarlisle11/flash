@@ -10,7 +10,7 @@
 session_start();
 
 /*** first check that both the employeeID, password and form token have been sent ***/
-if(!isset( $_POST['employeeID'], $_POST['password'], $_POST['form_token']))
+if(!isset( $_POST['employeeID'])||!isset($_POST['password'])||!isset( $_POST['form_token']))
 {
     $message = 'Please enter a valid employeeID and password';
 }
