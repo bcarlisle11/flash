@@ -13,8 +13,8 @@ echo "<script type='text/javascript' src='../script/reservations.js'></script>";
     <img class ="top-right" src="../flash.jpg" alt="flash" style="...">
 </header>
 <ul>
-    <li><a href="manageMenu.php">Menu</a></li>
-    <li><a href="manageItems.php">Items</a></li>
+    <li><a href="manageMenu.php">Manage Menu</a></li>
+    <li><a href="manageItems.php">Manage Items</a></li>
     <li class="dropdown">
         <a href="javascript:void(0)" class="dropdown_btn" onclick="dropDownList()">Reservations</a>
         <div class="dropdown_class" id="drop_list">

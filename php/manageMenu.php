@@ -4,7 +4,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-include_once 'pageNav.php';
+include_once 'pageNavLoggedIn.php';
 
 //echo(getDateOfDay('Monday', true));
 
@@ -152,11 +152,11 @@ function outputTableHeader() {
 
 
     echo("<tr>
-<th colspan = \"2\">Monday <br>{$mon}</th>
-<th colspan = \"2\">Tuesday <br>{$tues}</th>
-<th colspan = \"2\">Wednesday <br>{$wed}</th>
-<th colspan = \"2\">Thursday <br>{$thurs}</th>
-<th colspan = \"2\">Friday <br>{$fri}</th>
+<th colspan = \"2\">Monday <br>{$mon} <br><form method=\"get\" action=\"createMenu.php\"><button type=\"submit\" name=\"mode\" value=\"". getDateOfDay("Monday", true)  . "\">Edit this day</button></form></th>
+<th colspan = \"2\">Tuesday <br>{$tues} <br><form method=\"get\" action=\"createMenu.php\"><button type=\"submit\" name=\"mode\" value=\"". getDateOfDay("Tuesday", true)  . "\">Edit this day</button></form></th>
+<th colspan = \"2\">Wednesday <br>{$wed} <br><form method=\"get\" action=\"createMenu.php\"><button type=\"submit\" name=\"mode\" value=\"". getDateOfDay("Wednesday", true)  . "\">Edit this day</button></form></th>
+<th colspan = \"2\">Thursday <br>{$thurs} <br><form method=\"get\" action=\"createMenu.php\"><button type=\"submit\" name=\"mode\" value=\"". getDateOfDay("Thursday", true)  . "\">Edit this day</button></form></th>
+<th colspan = \"2\">Friday <br>{$fri} <br><form method=\"get\" action=\"createMenu.php\"><button type=\"submit\" name=\"mode\" value=\"". getDateOfDay("Friday", true)  . "\">Edit this day</button></form></th>
 </tr>");
 }
 
@@ -398,7 +398,11 @@ function getPDO($dbname) {
                     Select Week:
                     <button type=\"submit\" name=\"week\" value=\"{$prevWeekValue}\">Previous Week</button>
                     <button type=\"submit\" name=\"week\" value=\"{$nextWeekValue}\">Next Week</button>
-                </form>");
+                </form><br>");
+                    
+                    echo("<form action=\"createMenu.php\"> 
+                            <button type=\"submit\">Create new Menu Day</button>
+                            </form>");
             
 ?>
 

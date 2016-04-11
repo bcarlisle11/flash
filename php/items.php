@@ -41,8 +41,8 @@ function populateTableVars() {
             echo("
                       <tr>
                         <td class=\"listItem\" onclick=\"itemSelect(this);\">{$row['itemName']}</td>
-                        <td onclick=\"itemSelect(this);\">\${$priceFormatted}</td>
-                        <td onclick=\"itemSelect(this);\">{$row['itemCal']}</td>
+                        <td >\${$priceFormatted}</td>
+                        <td >{$row['itemCal']}</td>
                       
                           </tr>
                       
@@ -79,7 +79,6 @@ function outputItem() {
         $queryResult = $pdo->query($sql);
 
 
-
         while ($row = $queryResult->fetch(PDO::FETCH_ASSOC)) {
 
             $priceFormatted = sprintf('%.2f', $row['itemPrice']);
@@ -88,9 +87,17 @@ function outputItem() {
                         <h1>{$row['itemName']}</h1>
                         <p>\${$priceFormatted}, Calories: {$row['itemCal']}</p>
                         <p>{$row['itemDesc']}</p>
-                    </div>
+                    
                         ");
         }
+        $sql = "SELECT `itemPicture`,`pictureType` FROM `itempicture` WHERE itemName = '$name'";
+
+        $queryResult = $pdo->query($sql);
+        
+        $row = $queryResult->fetch(PDO::FETCH_ASSOC);
+        
+        echo("<img id=\"itemImage\" src=\"data:{$row['pictureType']};base64," . base64_encode($row['itemPicture']) . "\">");
+        
     } catch (PDOException $e) {
         
     }

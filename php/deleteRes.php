@@ -54,11 +54,25 @@ function getPDO($dbname)
     include_once"pageNav.php"
     ?>
     <div id="res_section">
-        <div id="form" class="center">
-            <form method ="post" action="updateRes.php">
-                <?php echo $queryData?>
-            </form>
-        </div>
+        <?php
+
+        //test to see if user is logged in as manager
+        session_start();
+
+        if(!isset($_SESSION['user_id']))
+        {
+            echo '<p>You must be logged in to access this page.</p>';
+        }
+        else
+        {
+            echo '<div id="form" class="center">
+                       <form method ="post" action="updateRes.php">
+                           <?php echo $queryData?>
+                       </form>
+                  </div>';
+        }
+        ?>
+
     </div>
     <div id="footer">
         Team Flash

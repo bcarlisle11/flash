@@ -6,6 +6,18 @@
  * Time: 10:05 PM
  * This page is to be used as the page nav for non-logged in pages
  */
+
+//start session
+session_start();
+
+if(!isset($_SESSION['user_id']))
+{
+    $message = 'Logout';
+}
+else {
+    $message = 'Login';
+}
+
 echo "<script type='text/javascript' src='../script/reservations.js'></script>";
 ?>
 <header id="header">
@@ -25,6 +37,5 @@ echo "<script type='text/javascript' src='../script/reservations.js'></script>";
             <a href="activeRes.php">Check Active Reservations</a>
         </div>
     </li>
-    <li><a href="login.html">Login</a></li>
-    <li><a href="about.html">Hours and Contact Info</a></li>
+    <li><a href="login.php"><?php echo $message; ?></a></li>
 </ul>

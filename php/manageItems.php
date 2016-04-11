@@ -6,7 +6,7 @@
  * and open the template in the editor.
  */
 
-include_once 'pageNav.php'; // change to manager facing pageNav
+include_once 'pageNavLoggedIn.php'; // change to manager facing pageNav
 $item = "";
 
 $name;
@@ -17,41 +17,116 @@ if (isset($_GET['item'])) {
 } elseif (isset($_POST['typeSelect'])) {
 //    echo($_POST['typeSelect']);
     displayTable();
-} elseif(isset($_POST['name'])){ 
+} elseif (isset($_POST['name'])) {
     addItemToDb();
     displayButtons();
-}elseif(isset($_POST['addItem'])){
+} elseif (isset($_POST['addItem'])) {
     //echo($_POST['addItem']);
-    addItemForm();
-} else{
+    if ($_POST['addItem'] === "entree" || $_POST['addItem'] === "side" || $_POST['addItem'] === "special") {
+        addItemForm();
+    } else {
+        //echo("I got here");
+        //echo($_POST['addItem'] == "");
+        editItemForm();
+        
+    }
+} else {
     displayButtons();
 }
 
-function addItemToDb(){
+
+function editItemForm(){
+    
+    echo($_POST['addItem']);
     
     try {
         $pdo = getPDO('flash');
+
+        $sql = "SELECT `itemName`,`itemCal`,`itemPrice`,`itemDesc`,`itemType` FROM `items` WHERE itemName = '{$_POST['addItem']}'";
+
+        $queryResult = $pdo->query($sql);
+
+        $row = $queryResult->fetch(PDO::FETCH_ASSOC);
+        
+        $name = $row['itemName'];
+        $cals = $row['itemCal'];
+        $price = $row['itemPrice'];
+        $desc = $row['itemDesc'];
+        $type = $row['itemType'];
+        
+
+    } catch (PDOException $e) {
+        
+    }
+    
+    echo("<div id=\"form\" class=\"center\">
+    
+    <h1>Edit an Item:</h1>
+    <form  enctype=\"multipart/form-data\" method=\"post\" action=\"manageItems.php\" id=\"addItemForm\">
+        <label for=\"name\">Item name:</label> <input type=\"text\" name=\"name\" size=\"50\" value=\"{$name}\" required><br><br>
+        <label for=\"cals\">Item calories:</label> <input type=\"number\" name=\"cals\" min=\"0\" step=\"1\" value=\"{$cals}\" required><br><br>
+        <label for=\"price\">Item price:</label> <input type=\"number\" name=\"price\" min=\"0\" step=\".01\" value=\"{$price}\" required><br><br>
+        <label for=\"desc\">Item Description:</label> <textarea rows=\"4\" cols=\"50\" form=\"addItemForm\" name=\"desc\" size=\"500\" value=\"\" required>{$desc}</textarea><br><br>
+        <input type=\"hidden\" name=\"MAX_FILE_SIZE\" value=\"3000000\" />
+        <label for=\"itemPicture\">Item Picture (if no picture is selected, it will not change):</label> <input type=\"file\" name=\"itemPicture\" id=\"itemPicture\" accept=\"image/*\"><br><br>
+        <input type=\"text\" name=\"type\" value=\"{$type}\" style=\"display:none;\">
+        <input type=\"submit\">
+    </form>
+    
+</div>");
+    
+    
+}
+
+
+function addItemToDb() {
+
+    try {
+        $pdo = getPDO('flash');
+
+        //echo($_FILES['itemPicture']['error']);
 
         $type = $_POST['type'];
         $name = $_POST['name'];
         $cals = $_POST['cals'];
         $price = $_POST['price'];
         $desc = $_POST['desc'];
-        
+        if($_FILES['itemPicture']['size'] != 0){
+        $picture = addslashes(file_get_contents($_FILES['itemPicture']['tmp_name']));
+        $pictureType = $_FILES['itemPicture']['type'];
+        }
+        unset($_POST);
+        $_POST = array();
+
+        $sql = "SELECT `itemName` FROM `items` WHERE itemName = '$name'";
+
+        $queryResult = $pdo->query($sql);
+
+        $row = $queryResult->fetch(PDO::FETCH_ASSOC);
+
+        if (isset($row['itemName'])) {
+            $sql = "DELETE FROM `items` WHERE `items`.`itemName` = '{$row['itemName']}';";
+
+            $queryResult = $pdo->query($sql);
+        }
+
+
+
+
 
         $sql = "INSERT INTO `items` (`itemName`, `itemType`, `itemPrice`, `itemCal`, `itemDesc`) VALUES ('$name', '$type', '$price', '$cals', '$desc')";
 
         $queryResult = $pdo->query($sql);
 
+        if($_FILES['itemPicture']['size'] != 0){
+        $sql = "INSERT INTO `itemPicture` (`itemName`, `itemPicture`, `pictureType`) VALUES ('$name', '$picture','$pictureType')";
+
+        $queryResult = $pdo->query($sql);
+        }
     } catch (PDOException $e) {
         
     }
-    
-    
-    
-    
 }
-
 
 function populateTableVars() {
     try {
@@ -73,8 +148,8 @@ function populateTableVars() {
             echo("
                       <tr>
                         <td class=\"listItem\" onclick=\"itemSelect(this);\">{$row['itemName']}</td>
-                        <td onclick=\"itemSelect(this);\">\${$priceFormatted}</td>
-                        <td onclick=\"itemSelect(this);\">{$row['itemCal']}</td>
+                        <td >\${$priceFormatted}</td>
+                        <td >{$row['itemCal']}</td>
                       
                           </tr>
                       
@@ -85,9 +160,10 @@ function populateTableVars() {
     }
 }
 
+// "alias"
 function outputRows() {
 
-    populateTableVars();
+    populateTableVars(); // probably not best practice.....
 //    
 //    for($i = 0; $i <= count($name); $i++){
 //        echo("
@@ -111,18 +187,32 @@ function outputItem() {
         $queryResult = $pdo->query($sql);
 
 
-
         while ($row = $queryResult->fetch(PDO::FETCH_ASSOC)) {
 
             $priceFormatted = sprintf('%.2f', $row['itemPrice']);
+
+            $name = $row['itemName'];
             echo("
                     <div id=\"item\">
+                    
+                        <form method=\"POST\" action=\"manageItems.php\">
+                            <input type=\"text\" name=\"addItem\" value=\"{$name}\" style=\"display:none;\">
+                            <input type=\"submit\" value=\"Edit Item\">
+                        </form>
+
                         <h1>{$row['itemName']}</h1>
                         <p>\${$priceFormatted}, Calories: {$row['itemCal']}</p>
                         <p>{$row['itemDesc']}</p>
-                    </div>
+                    
                         ");
         }
+        $sql = "SELECT `itemPicture`,`pictureType` FROM `itempicture` WHERE itemName = '$name'";
+
+        $queryResult = $pdo->query($sql);
+
+        $row = $queryResult->fetch(PDO::FETCH_ASSOC);
+
+        echo("<img id=\"itemImage\" src=\"data:{$row['pictureType']};base64," . base64_encode($row['itemPicture']) . "\"></div>");
     } catch (PDOException $e) {
         
     }
@@ -159,27 +249,25 @@ function getPDO($dbname) {
 
         <main>
 
-
-
 <?php
 
-function addItemForm(){
+function addItemForm() {
 
-echo("<div id=\"form\" class=\"center\">
+    echo("<div id=\"form\" class=\"center\">
     
     <h1>Add an item to the database:</h1>
-    <form method=\"post\" action=\"manageItems.php\" id=\"addItemForm\">
+    <form  enctype=\"multipart/form-data\" method=\"post\" action=\"manageItems.php\" id=\"addItemForm\">
         <label for=\"name\">Item name:</label> <input type=\"text\" name=\"name\" size=\"50\" value=\"\" required><br><br>
         <label for=\"cals\">Item calories:</label> <input type=\"number\" name=\"cals\" min=\"0\" step=\"1\" value=\"\" required><br><br>
         <label for=\"price\">Item price:</label> <input type=\"number\" name=\"price\" min=\"0\" step=\".01\" value=\"\" required><br><br>
         <label for=\"desc\">Item Description:</label> <textarea rows=\"4\" cols=\"50\" form=\"addItemForm\" name=\"desc\" size=\"500\" value=\"\" required></textarea><br><br>
+        <input type=\"hidden\" name=\"MAX_FILE_SIZE\" value=\"3000000\" />
+        <label for=\"itemPicture\">Item Picture:</label> <input type=\"file\" name=\"itemPicture\" id=\"itemPicture\" accept=\"image/*\" required><br><br>
         <input type=\"text\" name=\"type\" value=\"{$_POST['addItem']}\" style=\"display:none;\">
         <input type=\"submit\">
     </form>
     
 </div>");
-    
-    
 }
 
 function displayButtons() {
@@ -203,8 +291,8 @@ function displayTable() {
 
                 ");
     displayButtons();
-                
-              echo("  <div id=\"itemTableDiv\">
+
+    echo("  <div id=\"itemTableDiv\">
                     <table id=\"itemTable\">
                         <colgroup>
                             <col id=\"nameColumn\">
