@@ -26,7 +26,11 @@ echo "<script type='text/javascript' src='../script/reservations.js'></script>";
         </div>
     </div>
     <div id="footer">
-        Team Flash
+        Team Flash <br>
+        Our cafeteria is open from 7:00 AM to 5:00 PM when our offices close.<br>
+        Reservations for certain seating arrangements can be made by either using
+        the "Reservations" tab on this site, or by calling the kitchen at (217)-555-1940.<br>
+        Please make reservations at least 24 hours in advance.
     </div>
 </body>
 </html>
