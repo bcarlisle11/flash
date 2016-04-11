@@ -27,17 +27,14 @@ session_destroy();
 
 <body>
 
-<div id="header">
-    <h1>Flash Food Court</h1>
-    <img class="top-right" src="../flash.jpg" alt="flash" style="width:304px;height:228px;">
-</div>
+<?php include_once"pageNav.php"?>
 
 <div id="section">
     <br>
     You have successfully logged out.
     <br>
 
-    <button formaction="menu.php">OK</button>
+    <a href="menu.php"><button type="button">OK</button></a>
 </div>
 
 <div id="footer">

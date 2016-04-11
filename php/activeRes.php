@@ -21,7 +21,7 @@ echo "<script type='text/javascript' src='../script/reservations.js'></script>";
 
 //check if user is logged in
 session_start();
-if(isset($_SESSION['user_id']))
+if(!isset($_SESSION['user_id']))
 {
     include_once"pageNav.php";
 }else {

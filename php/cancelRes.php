@@ -20,7 +20,7 @@ echo "<script type='text/javascript' src='../script/reservations.js'></script>";
     <?php
     //check if user is logged in
     session_start();
-    if(isset($_SESSION['user_id']))
+    if(!isset($_SESSION['user_id']))
     {
         //if no, show login option
         include_once"pageNav.php";

@@ -30,7 +30,7 @@ $_SESSION['form_token'] = $form_token;
 <?php
 //check if user is logged in
 session_start();
-if(isset($_SESSION['user_id']))
+if(!isset($_SESSION['user_id']))
 {
     include_once"pageNav.php";
 }else {
