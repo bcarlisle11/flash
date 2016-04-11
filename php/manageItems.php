@@ -32,15 +32,25 @@ function addItemToDb(){
     try {
         $pdo = getPDO('flash');
 
+        //echo($_FILES['itemPicture']['error']);
+        
         $type = $_POST['type'];
         $name = $_POST['name'];
         $cals = $_POST['cals'];
         $price = $_POST['price'];
         $desc = $_POST['desc'];
+        $picture = addslashes(file_get_contents($_FILES['itemPicture']['tmp_name']));
+        $pictureType = $_FILES['itemPicture']['type'];
+        unset($_POST);
+    $_POST = array();
         
 
         $sql = "INSERT INTO `items` (`itemName`, `itemType`, `itemPrice`, `itemCal`, `itemDesc`) VALUES ('$name', '$type', '$price', '$cals', '$desc')";
 
+        $queryResult = $pdo->query($sql);
+        
+        $sql = "INSERT INTO `itemPicture` (`itemName`, `itemPicture`, `pictureType`) VALUES ('$name', '$picture','$pictureType')";
+        
         $queryResult = $pdo->query($sql);
 
     } catch (PDOException $e) {
@@ -111,7 +121,6 @@ function outputItem() {
         $queryResult = $pdo->query($sql);
 
 
-
         while ($row = $queryResult->fetch(PDO::FETCH_ASSOC)) {
 
             $priceFormatted = sprintf('%.2f', $row['itemPrice']);
@@ -120,9 +129,17 @@ function outputItem() {
                         <h1>{$row['itemName']}</h1>
                         <p>\${$priceFormatted}, Calories: {$row['itemCal']}</p>
                         <p>{$row['itemDesc']}</p>
-                    </div>
+                    
                         ");
         }
+        $sql = "SELECT `itemPicture`,`pictureType` FROM `itempicture` WHERE itemName = '$name'";
+
+        $queryResult = $pdo->query($sql);
+        
+        $row = $queryResult->fetch(PDO::FETCH_ASSOC);
+        
+        echo("<img id=\"itemImage\" src=\"data:{$row['pictureType']};base64," . base64_encode($row['itemPicture']) . "\">");
+        
     } catch (PDOException $e) {
         
     }
@@ -159,8 +176,6 @@ function getPDO($dbname) {
 
         <main>
 
-
-
 <?php
 
 function addItemForm(){
@@ -168,11 +183,13 @@ function addItemForm(){
 echo("<div id=\"form\" class=\"center\">
     
     <h1>Add an item to the database:</h1>
-    <form method=\"post\" action=\"manageItems.php\" id=\"addItemForm\">
+    <form  enctype=\"multipart/form-data\" method=\"post\" action=\"manageItems.php\" id=\"addItemForm\">
         <label for=\"name\">Item name:</label> <input type=\"text\" name=\"name\" size=\"50\" value=\"\" required><br><br>
         <label for=\"cals\">Item calories:</label> <input type=\"number\" name=\"cals\" min=\"0\" step=\"1\" value=\"\" required><br><br>
         <label for=\"price\">Item price:</label> <input type=\"number\" name=\"price\" min=\"0\" step=\".01\" value=\"\" required><br><br>
         <label for=\"desc\">Item Description:</label> <textarea rows=\"4\" cols=\"50\" form=\"addItemForm\" name=\"desc\" size=\"500\" value=\"\" required></textarea><br><br>
+        <input type=\"hidden\" name=\"MAX_FILE_SIZE\" value=\"3000000\" />
+        <label for=\"itemPicture\">Item Picture:</label> <input type=\"file\" name=\"itemPicture\" id=\"itemPicture\"><br><br>
         <input type=\"text\" name=\"type\" value=\"{$_POST['addItem']}\" style=\"display:none;\">
         <input type=\"submit\">
     </form>

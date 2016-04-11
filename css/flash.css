@@ -243,3 +243,8 @@ input, #editRes {
 td.listItem:hover{
     background-color: gray;
 }
+
+#itemImage{
+    height: 30%;
+    width: 30%;
+}
