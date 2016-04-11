@@ -39,7 +39,7 @@ $_SESSION['form_token'] = $form_token;
             <p>
                 Employee ID: <input type="text" id="employeeID" name="employeeID" value="" maxlength="20" /><br>
                 Password: <input type="text" id="password" name="password" value="" maxlength="20" /><br>
-                First Name: <input type="text" id="fname" name="fname" value="" maxLength="20">M<br>
+                First Name: <input type="text" id="fname" name="fname" value="" maxLength="20"><br>
                 Last Name: <input type="text" id="lname" name="lname" value="" maxLength="20"><br>
             </p>
             <p>
