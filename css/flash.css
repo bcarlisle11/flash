@@ -1,180 +1,250 @@
 @CHARSET "UTF-8";
 
 body{
-	background-color:rgb(200,200,200);
-	
+    background-color:rgb(200,200,200);
+
 }
 
 #header {
-	background-color:darkred;
-	color:black;
-	text-align:center;
-	padding:6px;
-	font-family: "Courier New";
+    background-color:darkred;
+    color:black;
+    text-align:center;
+    padding:6px;
+    font-family: "Courier New";
 }
 
 img {
-	height: 92px;
+    height: 92px;
 }
 
 .top-right {
-	position: absolute;
-	top: 8px;
-	right: 8px;
+    position: absolute;
+    top: 8px;
+    right: 8px;
 }
 
 #nav {
-	border:darkred 5px solid;
-	text-align:center;
-	padding:3px;
+    border:darkred 5px solid;
+    text-align:center;
+    padding:3px;
 }
 
 #form {
-	text-align:center;
-	font-weight: bold;
-	padding: 6px;
-	background-color: darkred;
-	width: 60%;
-	height: 47.5%;
-	border-radius: 25px;
+    text-align: center;
+    font-weight: bold;
+    padding: 1%;
+    background-color: darkred;
+    width: 60%;
+    height: 47.5%;
+    border-radius: 25px;
+    text-decoration-color: aliceblue;
 }
 
 
 .center {
-	margin: auto;
-	width: 60%;
+    margin: auto;
+    width: 60%;
 }
 
 #footer {
-	background-color:darkred;
-	text-align:center;
-	font-weight:bold;
-	padding:6px;
-	
+    background-color:darkred;
+    text-align:center;
+    font-weight:bold;
+    padding:6px;
+
 }
 
 #section {
-	border:gold 5px solid;
-	padding:6px;
-	text-align:center;
+    border:gold 5px solid;
+    padding:6px;
+    text-align:center;
 }
 
 #menu, th, td{
-	border: 1px solid black;
-	text-align:left;
-	
+    border: 1px solid black;
+    text-align:left;
+
 }
 th, td{
-	width: 200px;
+    width: 200px;
 }
 
 #surround{
-	position:relative;
-	height:500px;
-	border:gold solid 5px;
+    position:relative;
+    height:500px;
+    border:gold solid 5px;
 }
 
-#itemSelect, #itemDescription, #itemPicture{
-	
-	float:left;
-	min-height: 500px;
-	
-}
-
-#itemSelect{
-	width:250px;
-	margin-left: 10px;
-	margin-right: 20px;
-}
 
 #itemDescription{
-	width:auto;
-	margin-right: 20px;
+    width:auto;
+    margin-right: 20px;
 }
 
 #login{
-	padding:5px;
-	background-color:darkred;
-	text-align:left;
-	font-size:22px;
-	font-weight:bold;
+    padding:5px;
+    background-color:darkred;
+    text-align:left;
+    font-size:22px;
+    font-weight:bold;
 }
 
 li.dropdown {
-	display: inline-block;
+    display: inline-block;
 }
 
 .dropdown_class {
-	display: none;
-	position: absolute;
-	background-color: #f9f9f9;
-	min-width: 175px;
-	box-shadow: 0px 8px 16px 0px;
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 175px;
+    box-shadow: 0px 8px 16px 0px;
 }
 
 .dropdown_class a {
-	color: black;
-	padding: 10px 15px;
-	text-decoration: none;
-	display: block;
-	text-align: left;
+    color: black;
+    padding: 10px 15px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
 }
 
 ul {
-	list-style-type: none;
-	margin: 0;
-	padding: 0;
-	overflow: hidden;
-	background-color: #333;
-	text-align: center;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    text-align: center;
 }
 
 li {
-	float: none;
-	display: inline;
+    float: none;
+    display: inline;
 }
 
 li a, .dropbtn {
-	display: inline-block;
-	color: white;
-	text-align: center;
-	padding: 14px 16px;
-	text-decoration: none;
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
 }
 
 li a:hover, .dropdown:hover .dropdown_btn {
-	background-color: darkgoldenrod;
+    background-color: darkgoldenrod;
 }
 
 .dropdown_class a:hover {
-	background-color: #f1f1f1
+    background-color: #f1f1f1;
 }
 
 .show {
-	display:block;
+    display:block;
 }
 
 #res_section {
-	padding:6px;
-	text-align:center;
-	margin: 50px;
+    padding:6px;
+    text-align:center;
+    margin: 3%;
 }
 
 label{
-	display: inline-block;
-	float: left;
-	text-align: right;
+    display: inline-block;
+    float: left;
+    text-align: right;
 }
+
 input {
-	display: inline-block;
-	float: right;
+    display: inline-block;
+    float: right;
 }
 
 form {
-	display: inline-block;
+    display: inline-block;
 }
 
 #submit{
-	margin: auto;
-	float: none;
+    margin: auto;
+    float: none;
+}
+
+table, th {
+    border: 1px solid dimgrey;
+    text-align: center;
+    border-collapse: collapse;
+}
+
+th{
+    font-size: larger;
+    font-weight: bolder;
+}
+
+th, td {
+    padding: 5px;
+}
+
+td.menuItem:hover{
+    background-color: gray;
+}
+
+#entreeRow, #sideRow, #specialRow{
+    font-size: larger;
+    text-align: center;
+    border: 2px solid black;
+    background-color: lightgray;
+    font-weight: bolder;
+}
+
+
+
+td.menuItem{
+    text-align: center;
+    font-size: large;
+    font-weight: bold;
+}
+
+#item {
+    margin: auto;
+    width: 80%;
+    text-align: center;
+}
+
+#itemSelect {
+    margin: auto;
+    width:80%;
+    height: 70%;
+    text-align: center;
+}
+
+input, #editRes {
+    float: none;
+    margin: auto;
+}
+
+#itemTableDiv {
+    overflow-y: scroll;
+    margin: auto;
+    width:40%;
+    height: 70%;
+}
+
+#itemTable{
+    text-align: center;
+}
+
+#nameColumn{
+    width: 50%;
+}
+#priceColumn,#calColumn{
+    width: 25%;
+}
+
+td.listItem:hover{
+    background-color: gray;
+}
+
+#itemImage{
+    height: 30%;
+    width: 30%;
 }

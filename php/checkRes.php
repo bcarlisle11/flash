@@ -1,30 +1,40 @@
 <?php
-include ('inc.reservations.php');
 echo "<script type='text/javascript' src='../script/reservations.js'></script>";
 
 try {
+    //connect to db with pdo
     $pdo = getPDO('flash');
 
+    //get input values
     $id = $_POST['id'];
 
-    $sql = "SELECT `id`, `fname`, `lname`, `diners`, `dayof`, `timeof` FROM `reservations` WHERE id = $id";
+    //query to run
+    $sql = "SELECT `id`, `res_id`, `diners`, `dayof`, `timeof` FROM `reservations` WHERE id = $id";
 
+    //run the query
     $queryResult = $pdo->query($sql);
 
+    //build the table
+    $queryData = "    <table id='checkRes'>
+                      <th>Reservation ID</th>
+                      <th>Reservation Day</th>
+                      <th>Reservation Time</th>
+                      <th>Diners</th>
+                      </table>";
+
     while ( $row = $queryResult->fetch(PDO::FETCH_ASSOC) ) {
-        $queryData = "
-                <tr>
-                <label for 'id'>Employee ID: </label><input type='text' name='id' value={$row['id']} readonly><br><br>
-                <label for 'fname'>First Name: </label><input type='text' name='fname' value={$row['fname']} readonly><br><br>
-                <label for 'lname'>Last Name: </label><input type='text' name='lname' value={$row['lname']} readonly><br><br>
-                <label for 'id'>Reservation Day: </label><input type='text' name='id' value={$row['dayof']} readonly><br><br>
-                <label for 'fname'>Reservation Time: </label><input type='text' name='fname' value={$row['timeof']} readonly><br><br>
-                <label for 'lname'>Diners: </label><input type='text' name='lname' value={$row['diners']} readonly><br><br>
-                ";
+        //add the table values
+        $queryData .= "
+                      <table id='checkRes'>
+                      <th>{$row['res_id']}</th>
+                      <th>{$row['dayof']}</th>
+                      <th>{$row['timeof']}</th>
+                      <th>{$row['diners']}</th>
+                      </table>";
     }
 
 } catch (PDOException $e) {
-    //echo($e->getMessage());
+    $queryData = "Our records indicate that employee id: $id does not exist.  Please try again.";
 }
 
 function getPDO($dbname)
@@ -38,7 +48,6 @@ function getPDO($dbname)
         return $pdo;
 
     } catch (PDOException $e) {
-        //$GLOBALS['ConfirmationMessage'] = $e->getMessage();
     }
 }
 
@@ -50,13 +59,22 @@ function getPDO($dbname)
     <html>
     <head lang="en">
         <meta charset="UTF-8">
-        <title>Reservations</title>
+        <title>Active Reservations</title>
         <link rel="stylesheet" href="../css/flash.css">
     </head>
     <body>
     <main id="reservation_home">
 <?php
-include_once"pageNav.php"
+//check if user is logged in
+session_start();
+if(!isset($_SESSION['user_id']))
+{
+    //if no, show login option
+    include_once"pageNav.php";
+}else {
+    //if yes, show logout option
+    include_once "pageNavLoggedIn.php";
+}
 ?>
         <div method="post" id="res_section">
             <div id="form" class="center">

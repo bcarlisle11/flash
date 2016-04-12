@@ -4,22 +4,18 @@
  * User: bcarlisle11
  * Date: 4/3/16
  * Time: 10:05 PM
- * This page is to be used as the page nav for non-logged in pages
+ * This will be used as the nav bar on the page whenever a manager is logged in
  */
-
-//start session
-session_start();
-
-
 echo "<script type='text/javascript' src='../script/reservations.js'></script>";
 ?>
+
 <header id="header">
     <h1>Flash Food Court</h1>
     <img class ="top-right" src="../flash.jpg" alt="flash" style="...">
-    </header>
+</header>
 <ul>
-    <li><a href="menu.php">Menu</a></li>
-    <li><a href="items.php">Items</a></li>
+    <li><a href="manageMenu.php">Manage Menu</a></li>
+    <li><a href="manageItems.php">Manage Items</a></li>
     <li class="dropdown">
         <a href="javascript:void(0)" class="dropdown_btn" onclick="dropDownList()">Reservations</a>
         <div class="dropdown_class" id="drop_list">
@@ -30,5 +26,5 @@ echo "<script type='text/javascript' src='../script/reservations.js'></script>";
             <a href="activeRes.php">Check Active Reservations</a>
         </div>
     </li>
-    <li><a href="login.php">Login</a></li>
+    <li><a href="logout.php">Logout</a></li>
 </ul>
